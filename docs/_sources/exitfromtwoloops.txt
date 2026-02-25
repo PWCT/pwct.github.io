@@ -1,0 +1,117 @@
+.. index:: 
+	single: Exit from two loops; Exit from two loops
+
+===================
+Exit from two loops
+===================
+
+In this chapter we are going to learn about the Exit from two loops
+
+.. index:: 
+	pair: Exit from two loops; Introduction
+
+Introduction
+============
+
+We can create this program quickly using the Quick Start component
+
+.. image:: images/exitfromtwoloops/ib_quickstart_exitfromtwoloops.png
+        :alt: ib_quickstart_exitfromtwoloops.png
+
+.. index:: 
+	pair: Exit from two loops; Program Steps
+
+Program Steps
+=============
+
+After selecting the (Exit from two loops) template, we will get the next steps in the Goal Designer
+
+.. image:: images/exitfromtwoloops/gd_quickstart_exitfromtwoloops.png
+        :alt: gd_quickstart_exitfromtwoloops.png
+
+.. index:: 
+	pair: Exit from two loops; Creating the Program
+
+Creating the Program
+====================
+
+To create this program we will use the next components
+
+* For Loop
+* Print Text
+* If Statement
+* Exit
+
+In the begining the Steps Tree is empty
+
+.. image:: images/exitfromtwoloops/1.png
+		:alt: 1.png
+
+Select the (For Loop) component
+
+.. image:: images/exitfromtwoloops/2.png
+		:alt: 2.png
+
+.. image:: images/exitfromtwoloops/3.png
+		:alt: 3.png
+
+The Steps Tree will be updated
+
+.. image:: images/exitfromtwoloops/4.png
+		:alt: 4.png
+
+We will create an inner loop (i.e. for loop inside another for loop)
+
+This time, The loop will use the (y) variable
+
+.. image:: images/exitfromtwoloops/5.png
+		:alt: 5.png
+
+.. image:: images/exitfromtwoloops/6.png
+		:alt: 6.png
+
+We will print the (X) and (Y) values using the (Print Text) component
+
+.. image:: images/exitfromtwoloops/7.png
+		:alt: 7.png
+
+.. image:: images/exitfromtwoloops/8.png
+		:alt: 8.png
+
+.. image:: images/exitfromtwoloops/9.png
+		:alt: 9.png
+
+Using the (If Statement) component, we will check if x=3 and y=5
+
+When this happens, We will end both loops using the (Exit) component
+
+.. image:: images/exitfromtwoloops/10.png
+		:alt: 10.png
+
+.. image:: images/exitfromtwoloops/11.png
+		:alt: 11.png
+
+.. image:: images/exitfromtwoloops/12.png
+		:alt: 12.png
+
+.. image:: images/exitfromtwoloops/13.png
+		:alt: 13.png
+
+Select the (Exit) component
+
+.. image:: images/exitfromtwoloops/14.png
+		:alt: 14.png
+
+Enter the data in the Interaction Page
+
+Value: 2
+
+This means exit from two loops!
+
+.. image:: images/exitfromtwoloops/15.png
+		:alt: 15.png
+
+Now we have the final Steps Tree in our program
+
+.. image:: images/exitfromtwoloops/16.png
+		:alt: 16.png

@@ -1,0 +1,150 @@
+.. index:: 
+	single: Say Hello Program; Say Hello program
+
+=====================
+Say Hello program
+=====================
+
+In this chapter we are going to learn how to create the Say Hello program
+
+The User will enter his/her name then we will print (Hello UserName)
+
+In this lesson we will learn about
+
+* Variables
+* Expressions
+* Getting input using the Keyboard
+* Printing Expressions that merge between two strings
+
+.. index:: 
+	pair: Say Hello Program; Introduction
+
+Introduction
+============
+
+We can create this program quickly using the Quick Start component
+
+.. image:: images/sayhello/ib_quickstart_sayhello.png
+        :alt: ib_quickstart_sayhello.png
+
+.. index:: 
+	pair: Say Hello Program; Program Steps
+
+Program Steps
+=============
+
+After selecting the (Say Hello) template, we will get the next steps in the Goal Designer
+
+In the Output Window, The program prints the message (Enter your name?)
+
+After typing (Mahmoud), We see the (Hello Mahmoud) message on the Screen
+
+.. image:: images/sayhello/gd_quickstart_sayhello.png
+        :alt: gd_quickstart_sayhello.png
+
+.. index:: 
+	pair: Say Hello Program; Creating the Program
+
+Creating the Program
+====================
+
+To create this program we will use the next components
+
+* Comment (Optional)
+* Print Text
+* Get Input
+
+Using the Comment component, we will add some comments to our program!
+
+.. image:: images/sayhello/1.png
+		:alt: 1.png
+
+We can use the same component many times using the (Again) button
+
+.. image:: images/sayhello/2.png
+		:alt: 2.png
+
+We will add more than one comment to the program
+
+.. image:: images/sayhello/3.png
+		:alt: 3.png
+
+In the Interaction Page, We write the comment in the Text Field
+
+.. image:: images/sayhello/4.png
+		:alt: 4.png
+
+After writing the comment, The Steps Tree will be updated! 
+
+.. image:: images/sayhello/5.png
+		:alt: 5.png
+
+Let's add the other comments
+
+.. image:: images/sayhello/6.png
+		:alt: 6.png
+
+We can add empty lines to the Steps Tree by having empty comment 
+
+Empty lines could be a good separator between comments
+
+.. image:: images/sayhello/7.png
+		:alt: 7.png
+
+.. image:: images/sayhello/8.png
+		:alt: 8.png
+
+.. image:: images/sayhello/9.png
+		:alt: 9.png
+
+.. image:: images/sayhello/10.png
+		:alt: 10.png
+
+.. image:: images/sayhello/11.png
+		:alt: 11.png
+
+We will use the (Print Text) component
+
+.. image:: images/sayhello/12.png
+		:alt: 12.png
+
+.. image:: images/sayhello/13.png
+		:alt: 13.png
+
+.. image:: images/sayhello/14.png
+		:alt: 14.png
+
+Select the (Get Input) Component
+
+.. image:: images/sayhello/15.png
+		:alt: 15.png
+
+Type (cName) as the Variable Name
+
+Variables are used to store data in the Computer Memory
+
+Using the variable name we can set or get the variable value
+
+.. image:: images/sayhello/16.png
+		:alt: 16.png
+
+.. image:: images/sayhello/17.png
+		:alt: 17.png
+
+.. image:: images/sayhello/18.png
+		:alt: 18.png
+
+Now using the (Print Text) component we will print an Expression
+
+The Expression is a mix of Variables, Values & Operators
+
+In this example we use the Plus operator to merge between strings
+
+.. image:: images/sayhello/19.png
+		:alt: 19.png
+
+Now we have the final Steps Tree in our program
+
+.. image:: images/sayhello/20.png
+		:alt: 20.png
+

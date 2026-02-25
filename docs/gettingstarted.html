@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started &#8212; PWCT 2.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    
+    <script src="_static/jquery.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rich Comments" href="richcomments.html" />
+    <link rel="prev" title="The Concept" href="concept.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="richcomments.html" title="Rich Comments"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="concept.html" title="The Concept"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PWCT 2.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting Started</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="getting-started">
+<span id="index-0"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<p>In this chapter we are going to learn how to create our first application using PWCT</p>
+<section id="the-main-window">
+<span id="index-1"></span><h2>The Main Window<a class="headerlink" href="#the-main-window" title="Permalink to this heading"></a></h2>
+<p>When we run PWCT, The Main Window contains the next dockable windows</p>
+<ul class="simple">
+<li><p>Components Browser</p></li>
+<li><p>Project Files</p></li>
+<li><p>Form Designer</p></li>
+<li><p>Output Window</p></li>
+<li><p>Goal Designer</p></li>
+</ul>
+<img alt="p1.png" src="_images/p1.png" />
+<section id="components-browser">
+<h3>Components Browser<a class="headerlink" href="#components-browser" title="Permalink to this heading"></a></h3>
+<p>1 - Using the Components Browser, We can select a component to use</p>
+<p>2 - Each component could provide an Interaction Page (Data-Entry Window)</p>
+<p>3 - The Component lead the steps generation process in the Steps Tree (Inside the Goal Designer)</p>
+<p>4 - The Component also generate the Textual source code in the background</p>
+<img alt="components1.png" src="_images/components1.png" />
+<p>5 - We can search in the Components Tree by typing the Component name or some letters in the name</p>
+<p>For example, by typing the letter ‘p’ we can find the (Print Text) component</p>
+<img alt="components2.png" src="_images/components2.png" />
+<p>6 - To use the component after selecting it, Press (Enter) or (Double Click) using the Mouse</p>
+</section>
+<section id="project-files">
+<h3>Project Files<a class="headerlink" href="#project-files" title="Permalink to this heading"></a></h3>
+<p>Using the Project Files window, We can open visual source files quickly!</p>
+<img alt="projectfiles1.png" src="_images/projectfiles1.png" />
+<p>For example, We can open the file (tetris.pwct) which contains the Tetris game!</p>
+<p>To run this game we can click on the Run button in the Main Toolbar (Ctrl+F5)</p>
+<img alt="projectfiles2.png" src="_images/projectfiles2.png" />
+</section>
+<section id="form-designer">
+<h3>Form Designer<a class="headerlink" href="#form-designer" title="Permalink to this heading"></a></h3>
+<p>Using the Form Designer, We can design the application forms (User Interface)</p>
+<img alt="formdesigner1.png" src="_images/formdesigner1.png" />
+<p>For example, The User Interface of the Desktop Screen Shot application is designed using the Form Designer</p>
+<img alt="formdesigner2.png" src="_images/formdesigner2.png" />
+</section>
+<section id="output-window">
+<h3>Output Window<a class="headerlink" href="#output-window" title="Permalink to this heading"></a></h3>
+<p>Using the Output Window, We can see the programs output!</p>
+<img alt="outputwindow1.png" src="_images/outputwindow1.png" />
+<p>Also we can provide the required input for console applications</p>
+<p>For example, The next console application ask about the User Name!</p>
+<p>We can type the name in the Textbox then press (Enter) or click on the (Send) button</p>
+<img alt="outputwindow2.png" src="_images/outputwindow2.png" />
+</section>
+<section id="goal-designer">
+<h3>Goal Designer<a class="headerlink" href="#goal-designer" title="Permalink to this heading"></a></h3>
+<img alt="p2.png" src="_images/p2.png" />
+<p>1 - Contains the Steps Tree that represent the logic behind our program</p>
+<p>2 - Contains buttons that we can use to control the steps tree</p>
+<p>3 - Contains the Time Machine</p>
+<p>3.1 - Support running the program in the past</p>
+<p>3.2 - Support playing the program as movie</p>
+</section>
+</section>
+<section id="hello-world-program">
+<span id="index-2"></span><h2>Hello World Program<a class="headerlink" href="#hello-world-program" title="Permalink to this heading"></a></h2>
+<p>In this section we will learn how to create the (Hello, World!) program</p>
+<p>Section Contents:</p>
+<ol class="arabic simple">
+<li><p>How to create the program using the Mouse</p></li>
+<li><p>The Steps Summary</p></li>
+<li><p>How to create the program using the Keyboard Shortcuts</p></li>
+</ol>
+<section id="hello-world-program-using-the-mouse">
+<h3>Hello World Program (Using the Mouse)<a class="headerlink" href="#hello-world-program-using-the-mouse" title="Permalink to this heading"></a></h3>
+<p>From the Components Browser, Select the (Print Text) component</p>
+<p>Then double click using the Mouse</p>
+<img alt="p1.png" src="_images/p11.png" />
+<p>After selecting the component, an interaction page will appears in the Goal Designer</p>
+<p>Using this Interaction Page we can determine the text that will be printed on the screen</p>
+<p>Type: Hello, World!</p>
+<p>Then click the (Ok) button</p>
+<img alt="p2.png" src="_images/p21.png" />
+<p>This will generate the next step in the Goal Designer Window</p>
+<img alt="p3.png" src="_images/p3.png" />
+<p>Now we can run the program and see the program output</p>
+<p>To run the program click on the (Run) button from the Main Toolbar</p>
+<img alt="p4.png" src="_images/p4.png" />
+<p>The next output will appears in the Output Window</p>
+<img alt="p5.png" src="_images/p5.png" />
+</section>
+<section id="hello-world-program-steps-summary">
+<h3>Hello World Program (Steps Summary)<a class="headerlink" href="#hello-world-program-steps-summary" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select (Print Text) from the Components Browser</p></li>
+<li><p>Enter (Hello, World!) then click (Ok) in the Interaction Page</p></li>
+<li><p>Click (Run) from the Main Toolbar</p></li>
+</ol>
+<img alt="hello.png" src="_images/hello.png" />
+</section>
+<section id="hello-world-program-using-the-keyboard">
+<h3>Hello World Program (Using the Keyboard)<a class="headerlink" href="#hello-world-program-using-the-keyboard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Inside the Goal Designer window press the letter ‘p’</p></li>
+<li><p>The Search Textbox will be active, and the pressed letter will be written there</p></li>
+<li><p>This will select the (Print Text) component</p></li>
+<li><p>Press (Enter) to use the (Print Text) Component</p></li>
+<li><p>Write (Hello, World!) then press CTRL+W (Similar to clicking on the OK button)</p></li>
+<li><p>Press CTRL+F5 to run the program!</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pressing any letter inside the Goal Designer will move us to the Components Browser</p>
+</div>
+</section>
+</section>
+<section id="using-the-goal-designer">
+<span id="index-3"></span><h2>Using the Goal Designer<a class="headerlink" href="#using-the-goal-designer" title="Permalink to this heading"></a></h2>
+<p>In this section we will learn about using the Goal Designer</p>
+<p>Section contents:</p>
+<ul class="simple">
+<li><p>Copy &amp; Paste the Steps</p></li>
+<li><p>Modify the Steps</p></li>
+<li><p>Using the Time Machine</p></li>
+<li><p>Moving Steps Up &amp; Down</p></li>
+<li><p>Cut &amp; Paste Steps</p></li>
+<li><p>Inserting Steps</p></li>
+<li><p>Comment/Uncomment Steps</p></li>
+<li><p>Deleting Steps</p></li>
+<li><p>Search and Replace</p></li>
+<li><p>Using the Again Button</p></li>
+</ul>
+<section id="copy-paste-the-steps">
+<span id="index-4"></span><h3>Copy &amp; Paste the Steps<a class="headerlink" href="#copy-paste-the-steps" title="Permalink to this heading"></a></h3>
+<p>Select the step (Print Hello, World!) then click on the (Copy) button or press Ctrl+C</p>
+<img alt="copypaste1.png" src="_images/copypaste1.png" />
+<p>Now select the Start Point then click on the (Paste) button or press Ctrl+V</p>
+<img alt="copypaste2.png" src="_images/copypaste2.png" />
+<p>We can do the paste operation many times</p>
+<img alt="copypaste3.png" src="_images/copypaste3.png" />
+<p>Now when we run the program using Ctrl+F5 we can see the (Hello, World!) message printed seven times</p>
+<p>Sure it’s not the right way to program something like this because it’s better to use a For-Loop</p>
+<img alt="copypaste4.png" src="_images/copypaste4.png" />
+</section>
+<section id="modify-the-steps">
+<span id="index-5"></span><h3>Modify the Steps<a class="headerlink" href="#modify-the-steps" title="Permalink to this heading"></a></h3>
+<p>To modify a step, We can click on the (Modify) button or press Ctrl+E or double click on the step.</p>
+<p>Select the first step, Then press Ctrl+E</p>
+<img alt="modify1.png" src="_images/modify1.png" />
+<p>Change the Text from (Hello, World!) to (one) then press Ctrl+W</p>
+<img alt="modify2.png" src="_images/modify2.png" />
+<p>Change all of the steps to print the numbers from (one) to (seven)</p>
+<p>Then run the program using Ctrl+F5</p>
+<img alt="modify3.png" src="_images/modify3.png" />
+</section>
+<section id="using-the-time-machine">
+<span id="index-6"></span><h3>Using the Time Machine<a class="headerlink" href="#using-the-time-machine" title="Permalink to this heading"></a></h3>
+<p>Inside the Goal Designer and using The Time Machine Slider we can move backward along the Time Dimension</p>
+<p>For example, At this point in the past we have three steps only</p>
+<img alt="time1.png" src="_images/time1.png" />
+<p>We can run the program in the past using Ctrl+F5</p>
+<p>This will print (one two three) - Each word in separate line</p>
+<img alt="time2.png" src="_images/time2.png" />
+<p>We can move forward and go to the present where we have all of the seven steps</p>
+<p>Also we can click on the (Play) button to play the program as movie</p>
+<p>This will create the program step-by-step to learn how to generate each step</p>
+<p>This will display the selected component in the Components Browser and the Interaction Pages too!</p>
+<img alt="time3.png" src="_images/time3.png" />
+<p>For example, at this point in the past, Nothing exist!</p>
+<img alt="time4.png" src="_images/time4.png" />
+<p>While at this point we have two steps</p>
+<img alt="time5.png" src="_images/time5.png" />
+</section>
+<section id="moving-steps-up-down">
+<span id="index-7"></span><h3>Moving Steps Up &amp; Down<a class="headerlink" href="#moving-steps-up-down" title="Permalink to this heading"></a></h3>
+<p>We can change the order of the steps inside the Steps Tree using the Up &amp; Down buttons</p>
+<p>For Example, Select the step (Print seven) then click on the Up button or press Ctrl+U</p>
+<img alt="moveup1.png" src="_images/moveup1.png" />
+<p>Now we see the (Print seven) comes before (Print six)</p>
+<img alt="moveup2.png" src="_images/moveup2.png" />
+<p>Click on the Up button many times until the (Print seven) step becomes the first step</p>
+<p>Then run the program using Ctrl+F5</p>
+<img alt="moveup3.png" src="_images/moveup3.png" />
+</section>
+<section id="cut-paste-steps">
+<span id="index-8"></span><h3>Cut &amp; Paste Steps<a class="headerlink" href="#cut-paste-steps" title="Permalink to this heading"></a></h3>
+<p>Select the (Print seven) step then click on the (Cut) button or press Ctrl+X</p>
+<img alt="cut1.png" src="_images/cut1.png" />
+<p>Select the (Start Point) then click on the (Paste) button or press Ctrl+V</p>
+<img alt="cut2.png" src="_images/cut2.png" />
+<p>This will paste the (Print seven) step after the (Print six) step</p>
+<p>Run the program using Ctrl+F5</p>
+<img alt="cut3.png" src="_images/cut3.png" />
+</section>
+<section id="inserting-steps">
+<span id="index-9"></span><h3>Inserting Steps<a class="headerlink" href="#inserting-steps" title="Permalink to this heading"></a></h3>
+<p>To insert a new step after the (Print three) step</p>
+<p>At first select the (Print three) step then start a new interaction process</p>
+<p>Start using the (Print Text) component</p>
+<img alt="insert1.png" src="_images/insert1.png" />
+<p>The new generated step will be added directly after the (Print three) step</p>
+<img alt="insert2.png" src="_images/insert2.png" />
+</section>
+<section id="comment-uncomment-steps">
+<span id="index-10"></span><h3>Comment/Uncomment Steps<a class="headerlink" href="#comment-uncomment-steps" title="Permalink to this heading"></a></h3>
+<p>To comment a step, Select it first then click on the (Comment/Uncomment) button or press Ctrl+I</p>
+<img alt="comment1.png" src="_images/comment1.png" />
+<p>The commented step will not be executed when we run the program</p>
+<img alt="comment2.png" src="_images/comment2.png" />
+<p>To enable the step again (Uncomment), select it then click on the (Comment/Uncomment) button</p>
+<img alt="comment3.png" src="_images/comment3.png" />
+</section>
+<section id="deleting-steps">
+<span id="index-11"></span><h3>Deleting Steps<a class="headerlink" href="#deleting-steps" title="Permalink to this heading"></a></h3>
+<p>To delete a step, select it then click on the (Delete) button</p>
+<img alt="deletestep1.png" src="_images/deletestep1.png" />
+<p>Click (Yes) or press (Enter) to delete the step</p>
+<img alt="deletestep2.png" src="_images/deletestep2.png" />
+</section>
+<section id="search-and-replace">
+<span id="index-12"></span><h3>Search and Replace<a class="headerlink" href="#search-and-replace" title="Permalink to this heading"></a></h3>
+<p>To find a step, click the (Search) button or press Ctrl+F</p>
+<img alt="search1.png" src="_images/search1.png" />
+<p>For example, In the Search window type the letter “o” then click (Search) or press Enter</p>
+<p>Once we select a step from the Results Listbox, this step will be the active step in the Steps Tree</p>
+<img alt="search2.png" src="_images/search2.png" />
+<p>We can replace the text with another text</p>
+<img alt="search3.png" src="_images/search3.png" />
+<p>For example replace (seven) with ( ** seven ** ) then click the (Replace) button</p>
+<img alt="search4.png" src="_images/search4.png" />
+<p>Then run the program using Ctrl+F5 to see the change in the output</p>
+<img alt="search5.png" src="_images/search5.png" />
+</section>
+<section id="using-the-again-button">
+<span id="index-13"></span><h3>Using the Again Button<a class="headerlink" href="#using-the-again-button" title="Permalink to this heading"></a></h3>
+<p>We can use the same component many times using the (Again) button</p>
+<p>For example, when we use the (Print Text) component, and after writing the text (eight) click (Again) instead of (Ok)</p>
+<img alt="again1.png" src="_images/again1.png" />
+<p>This will generate the step (Print eight) in the steps tree</p>
+<p>Also we can use the interaction page to write another text like (nine)</p>
+<p>Click (again)</p>
+<img alt="again2.png" src="_images/again2.png" />
+<p>Now we have the step (Print nine) in the Steps Tree</p>
+<p>This time we will write (ten) then click (Ok) or press Ctrl+W</p>
+<img alt="again3.png" src="_images/again3.png" />
+<p>Run the program using Ctrl+F5 to see the output</p>
+<img alt="again4.png" src="_images/again4.png" />
+</section>
+<section id="undo">
+<span id="index-14"></span><h3>Undo<a class="headerlink" href="#undo" title="Permalink to this heading"></a></h3>
+<p>If we did something wrong in the Steps Tree (Like deleting a step) we can cancel this using Ctrl+Z</p>
+<p>Also we can select (Undo) from the (Edit) menu instead of pressing Ctrl+Z</p>
+</section>
+</section>
+<section id="visual-source-files">
+<span id="index-15"></span><h2>Visual Source Files<a class="headerlink" href="#visual-source-files" title="Permalink to this heading"></a></h2>
+<p>In this section we will learn about the Visual Source Files ( <a href="#id1"><span class="problematic" id="id2">*</span></a>.pwct )</p>
+<p>Section contents:</p>
+<ul class="simple">
+<li><p>Saving the file</p></li>
+<li><p>Opening the file</p></li>
+<li><p>Starting new file</p></li>
+</ul>
+<section id="saving-the-file">
+<span id="index-16"></span><h3>Saving the file<a class="headerlink" href="#saving-the-file" title="Permalink to this heading"></a></h3>
+<p>To save the file, Click on the (Save) button from the Main Toolbar or press Ctrl+S</p>
+<img alt="save1.png" src="_images/save1.png" />
+<p>Select the folder, or create a new folder</p>
+<p>For example : pwct2/applications/myprograms</p>
+<p>Then type the file name : program1</p>
+<p>The saved file will be progam1.pwct</p>
+<img alt="save2.png" src="_images/save2.png" />
+<p>After saving the file, the file name will be used as the window title in the Goal Designer</p>
+<img alt="save3.png" src="_images/save3.png" />
+</section>
+<section id="opening-the-file">
+<span id="index-17"></span><h3>Opening the file<a class="headerlink" href="#opening-the-file" title="Permalink to this heading"></a></h3>
+<p>To open a file, click on the (Open) button from the Main Toolbar</p>
+<img alt="open1.png" src="_images/open1.png" />
+<p>Select the file, for example: program1.pwct</p>
+<img alt="open2.png" src="_images/open2.png" />
+<p>Also we can open the files using the Project Files window</p>
+<p>Just go to the folder and select the file</p>
+<img alt="open3.png" src="_images/open3.png" />
+</section>
+<section id="starting-new-file">
+<span id="index-18"></span><h3>Starting new file<a class="headerlink" href="#starting-new-file" title="Permalink to this heading"></a></h3>
+<p>To start a new file, From the (File) menu, select (New) or press Ctrl+Alt+N</p>
+<p>Another way is to click on the (New) button from the Main toolbar</p>
+<img alt="newfile.png" src="_images/newfile.png" />
+<p>The new file name will be (noname.pwct)</p>
+<p>To change the file name click (Save)</p>
+</section>
+<section id="save-as">
+<span id="index-19"></span><h3>Save As<a class="headerlink" href="#save-as" title="Permalink to this heading"></a></h3>
+<p>Using (Save As) we can save the file using another name</p>
+<img alt="saveas.png" src="_images/saveas.png" />
+</section>
+<section id="printing-the-file">
+<span id="index-20"></span><h3>Printing the file<a class="headerlink" href="#printing-the-file" title="Permalink to this heading"></a></h3>
+<p>To print the file press Ctrl+P or select (Print to PDF) from the file menu</p>
+<p>We can print the Steps Tree</p>
+<img alt="print1.png" src="_images/print1.png" />
+<p>Also we can print the textual source code</p>
+<img alt="print2.png" src="_images/print2.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We can copy the text that represent the Steps Tree or the Source Code and paste it in our discussions in Online Forums</p>
+</div>
+</section>
+<section id="go-to-line">
+<span id="index-21"></span><h3>Go to line<a class="headerlink" href="#go-to-line" title="Permalink to this heading"></a></h3>
+<p>Each visual source file ( <a href="#id3"><span class="problematic" id="id4">*</span></a>.pwct ) represent a textural source code file</p>
+<p>Sometimes we want to select a step inside the Steps Tree that represent a specific line in the textual source code</p>
+<p>This is useful if we have a runtime error in a specific line of source code</p>
+<p>Using (Go to line) from the (Edit) menu, we can do that</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We can open the (Go to line) window using Ctrl+G</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each step in the Step Tree could repsent one or many of textural source code lines</p>
+</div>
+<img alt="gotoline.png" src="_images/gotoline.png" />
+</section>
+</section>
+<section id="customization">
+<span id="index-22"></span><h2>Customization<a class="headerlink" href="#customization" title="Permalink to this heading"></a></h2>
+<p>In this section we will learn about the customization of the PWCT Environment</p>
+<p>Section contents:</p>
+<ul class="simple">
+<li><p>View Menu</p></li>
+<li><p>Customization Window</p></li>
+</ul>
+<section id="view-menu">
+<span id="index-23"></span><h3>View Menu<a class="headerlink" href="#view-menu" title="Permalink to this heading"></a></h3>
+<p>From the View menu we can navigate quickly to the different dockable windows</p>
+<p>Also we have keyboard shortcuts to do the navigation quickly</p>
+<ul class="simple">
+<li><p>To activate the Project Files window press Alt+P</p></li>
+<li><p>To activate the Goal Designer window press Alt+G</p></li>
+<li><p>To activate the Output window press Alt+O</p></li>
+</ul>
+<p>From the (Appearance) submenu we can show/hide the different windows and toolbars</p>
+<img alt="cust1.png" src="_images/cust1.png" />
+<p>From the (Mode) submenu we can quickly arrange the dockable windows</p>
+<img alt="cust2.png" src="_images/cust2.png" />
+<p>From the (Style) submenu we can change the theme</p>
+<img alt="cust3.png" src="_images/cust3.png" />
+</section>
+<section id="customization-window">
+<span id="index-24"></span><h3>Customization Window<a class="headerlink" href="#customization-window" title="Permalink to this heading"></a></h3>
+<p>To open the Customization window, From the (Edit) menu select(Customization) or Press Alt+C</p>
+<p>From this window we can change the Steps Tree colors</p>
+<img alt="cust4.png" src="_images/cust4.png" />
+<p>Also we have more options that control the behavior of the PWCT environment</p>
+<img alt="cust5.png" src="_images/cust5.png" />
+</section>
+</section>
+<section id="run-programs">
+<span id="index-25"></span><h2>Run Programs<a class="headerlink" href="#run-programs" title="Permalink to this heading"></a></h2>
+<p>We can run programs using the Program menu or using the Toolbars</p>
+<p>Also we can use the Keyboard shortcuts</p>
+<section id="program-menu">
+<span id="index-26"></span><h3>Program Menu<a class="headerlink" href="#program-menu" title="Permalink to this heading"></a></h3>
+<p>From the Program menu, we can run the current opened file using different options</p>
+<p>Also we can run the Main file in the project</p>
+<img alt="programmenu1.png" src="_images/programmenu1.png" />
+<p>Selecting (Debug - Run then wait) will display the output in the command prompt window</p>
+<p>After running the program, the pause command will be executed so we can see the output</p>
+<img alt="programmenu2.png" src="_images/programmenu2.png" />
+<p>Also we have the (Run web application) option that we can use during web development</p>
+<p>Also we have this option in the Main toolbar</p>
+<img alt="programmenu3.png" src="_images/programmenu3.png" />
+<p>For example, the next program display (Hello, World) in the web browser</p>
+<img alt="programmenu4.png" src="_images/programmenu4.png" />
+</section>
+<section id="main-file-toolbar">
+<h3>Main File toolbar<a class="headerlink" href="#main-file-toolbar" title="Permalink to this heading"></a></h3>
+<p>The program menu contains options for using the (Main File)</p>
+<p>When we have a project that contains many visual source files, we can select one of these files as the Main file that we can use to run the project</p>
+<p>For example we select (goldmagic800.pwct) as the main file, This file generate (goldmagic800.ring)</p>
+<img alt="programmenu5.png" src="_images/programmenu5.png" />
+<p>We can run the main file while opening other files in the project</p>
+<img alt="programmenu6.png" src="_images/programmenu6.png" />
+</section>
+</section>
+<section id="more-options">
+<span id="index-27"></span><h2>More Options<a class="headerlink" href="#more-options" title="Permalink to this heading"></a></h2>
+<p>In this section we will learn more about the features and resources provided by the PWCT Environment</p>
+<p>Section contents:</p>
+<ul class="simple">
+<li><p>Tools Menu</p></li>
+<li><p>Distribute Menu</p></li>
+<li><p>Help Menu</p></li>
+</ul>
+<section id="tools-menu">
+<span id="index-28"></span><h3>Tools Menu<a class="headerlink" href="#tools-menu" title="Permalink to this heading"></a></h3>
+<p>From the tools menu we can run the Form Designer or the RingREPL (Read-Eval-Print-Loop)</p>
+<p>Also we can open the Command Prompt or the Files Explorer</p>
+<img alt="tools1.png" src="_images/tools1.png" />
+<p>When we open the Command Prompt, the current directory will be the folder of the opened visual source file</p>
+<img alt="tools2.png" src="_images/tools2.png" />
+<p>Also when we open the Files Explorer, the current directory will be the folder of the opened file</p>
+<img alt="tools3.png" src="_images/tools3.png" />
+<p>When we run RingREPL we can write and execute Ring code directly</p>
+<img alt="tools4.png" src="_images/tools4.png" />
+<p>For example, We can write and execute the next program that print a message on the screen</p>
+<div class="highlight-ring notranslate"><div class="highlight"><pre><span></span><span class="o">?</span> <span class="s">&quot;Hello, World!&quot;</span>
+</pre></div>
+</div>
+<img alt="tools5.png" src="_images/tools5.png" />
+<p>We have also the GUI version of RingREPL</p>
+<img alt="tools6.png" src="_images/tools6.png" />
+<p>This version comes with the History option that contains the previous commands</p>
+<img alt="tools7.png" src="_images/tools7.png" />
+</section>
+<section id="distribute-menu">
+<span id="index-29"></span><h3>Distribute Menu<a class="headerlink" href="#distribute-menu" title="Permalink to this heading"></a></h3>
+<p>Using the Distribute menu we can distribute or applications and build executable files</p>
+<img alt="distribute1.png" src="_images/distribute1.png" />
+<p>For example, we can build (program1.exe) for our program</p>
+<img alt="distribute2.png" src="_images/distribute2.png" />
+<p>We can run (program1.exe) from the command prompt and see the output</p>
+<img alt="distribute3.png" src="_images/distribute3.png" />
+</section>
+<section id="help-menu">
+<span id="index-30"></span><h3>Help Menu<a class="headerlink" href="#help-menu" title="Permalink to this heading"></a></h3>
+<p>Using the Help menu we can open PWCT or Ring documentation</p>
+<p>The documentation comes in different formats like CHM &amp; PDF</p>
+<img alt="helpmenu1.png" src="_images/helpmenu1.png" />
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/pwctdoclogo.jpg" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#the-main-window">The Main Window</a><ul>
+<li><a class="reference internal" href="#components-browser">Components Browser</a></li>
+<li><a class="reference internal" href="#project-files">Project Files</a></li>
+<li><a class="reference internal" href="#form-designer">Form Designer</a></li>
+<li><a class="reference internal" href="#output-window">Output Window</a></li>
+<li><a class="reference internal" href="#goal-designer">Goal Designer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hello-world-program">Hello World Program</a><ul>
+<li><a class="reference internal" href="#hello-world-program-using-the-mouse">Hello World Program (Using the Mouse)</a></li>
+<li><a class="reference internal" href="#hello-world-program-steps-summary">Hello World Program (Steps Summary)</a></li>
+<li><a class="reference internal" href="#hello-world-program-using-the-keyboard">Hello World Program (Using the Keyboard)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-goal-designer">Using the Goal Designer</a><ul>
+<li><a class="reference internal" href="#copy-paste-the-steps">Copy &amp; Paste the Steps</a></li>
+<li><a class="reference internal" href="#modify-the-steps">Modify the Steps</a></li>
+<li><a class="reference internal" href="#using-the-time-machine">Using the Time Machine</a></li>
+<li><a class="reference internal" href="#moving-steps-up-down">Moving Steps Up &amp; Down</a></li>
+<li><a class="reference internal" href="#cut-paste-steps">Cut &amp; Paste Steps</a></li>
+<li><a class="reference internal" href="#inserting-steps">Inserting Steps</a></li>
+<li><a class="reference internal" href="#comment-uncomment-steps">Comment/Uncomment Steps</a></li>
+<li><a class="reference internal" href="#deleting-steps">Deleting Steps</a></li>
+<li><a class="reference internal" href="#search-and-replace">Search and Replace</a></li>
+<li><a class="reference internal" href="#using-the-again-button">Using the Again Button</a></li>
+<li><a class="reference internal" href="#undo">Undo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#visual-source-files">Visual Source Files</a><ul>
+<li><a class="reference internal" href="#saving-the-file">Saving the file</a></li>
+<li><a class="reference internal" href="#opening-the-file">Opening the file</a></li>
+<li><a class="reference internal" href="#starting-new-file">Starting new file</a></li>
+<li><a class="reference internal" href="#save-as">Save As</a></li>
+<li><a class="reference internal" href="#printing-the-file">Printing the file</a></li>
+<li><a class="reference internal" href="#go-to-line">Go to line</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customization">Customization</a><ul>
+<li><a class="reference internal" href="#view-menu">View Menu</a></li>
+<li><a class="reference internal" href="#customization-window">Customization Window</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-programs">Run Programs</a><ul>
+<li><a class="reference internal" href="#program-menu">Program Menu</a></li>
+<li><a class="reference internal" href="#main-file-toolbar">Main File toolbar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#more-options">More Options</a><ul>
+<li><a class="reference internal" href="#tools-menu">Tools Menu</a></li>
+<li><a class="reference internal" href="#distribute-menu">Distribute Menu</a></li>
+<li><a class="reference internal" href="#help-menu">Help Menu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="concept.html"
+                          title="previous chapter">The Concept</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="richcomments.html"
+                          title="next chapter">Rich Comments</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="richcomments.html" title="Rich Comments"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="concept.html" title="The Concept"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PWCT 2.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting Started</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023-2025, Mahmoud Fayed.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    </div>
+  </body>
+</html>

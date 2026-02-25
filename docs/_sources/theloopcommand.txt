@@ -1,0 +1,110 @@
+.. index:: 
+	single: The Loop Command; The Loop Command
+
+================
+The Loop Command
+================
+
+In this chapter we are going to learn about the The Loop Command
+
+.. index:: 
+	pair: The Loop Command; Introduction
+
+Introduction
+============
+
+We can create this program quickly using the Quick Start component
+
+.. image:: images/theloopcommand/ib_quickstart_theloopcommand.png
+        :alt: ib_quickstart_theloopcommand.png
+
+.. index:: 
+	pair: The Loop Command; Program Steps
+
+Program Steps
+=============
+
+After selecting the (The Loop Command) template, we will get the next steps in the Goal Designer
+
+.. image:: images/theloopcommand/gd_quickstart_theloopcommand.png
+        :alt: gd_quickstart_theloopcommand.png
+
+.. index:: 
+	pair: The Loop Command; Creating the Program
+
+Creating the Program
+====================
+
+To create this program we will use the next components
+
+* For Loop
+* If Statement
+* Print Text
+* Loop
+
+In the begining the Steps Tree is empty
+
+.. image:: images/theloopcommand/1.png
+		:alt: 1.png
+
+Using the (For Loop) component we will create a loop from 1 to 10
+
+The loop will use the X variable
+
+.. image:: images/theloopcommand/2.png
+		:alt: 2.png
+
+.. image:: images/theloopcommand/3.png
+		:alt: 3.png
+
+.. image:: images/theloopcommand/4.png
+		:alt: 4.png
+
+Using the (If Statement) component we will check if X=3
+
+When this happens, we will print the (Three) message
+
+.. image:: images/theloopcommand/5.png
+		:alt: 5.png
+
+.. image:: images/theloopcommand/6.png
+		:alt: 6.png
+
+.. image:: images/theloopcommand/7.png
+		:alt: 7.png
+
+.. image:: images/theloopcommand/8.png
+		:alt: 8.png
+
+.. image:: images/theloopcommand/9.png
+		:alt: 9.png
+
+.. image:: images/theloopcommand/10.png
+		:alt: 10.png
+
+Using the (Loop) component, we will pass the next instructions in the loop
+
+i.e. We will move to the next iteration in the loop
+
+
+.. image:: images/theloopcommand/11.png
+		:alt: 11.png
+
+.. image:: images/theloopcommand/12.png
+		:alt: 12.png
+
+.. image:: images/theloopcommand/13.png
+		:alt: 13.png
+
+Using the (Print Text) component we will print the (X) variable
+
+.. image:: images/theloopcommand/14.png
+		:alt: 14.png
+
+.. image:: images/theloopcommand/15.png
+		:alt: 15.png
+
+Now we have the final Steps Tree in our program
+
+.. image:: images/theloopcommand/16.png
+		:alt: 16.png

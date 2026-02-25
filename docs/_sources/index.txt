@@ -1,0 +1,36 @@
+.. PWCT documentation master file, created by
+   sphinx-quickstart on Saturday October 09 08:50:42 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to PWCT's documentation!
+================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 3
+
+   Introduction <introduction>
+   The Concept <concept>
+   Getting Started <gettingstarted>
+   Rich Comments <richcomments>
+   Basic Program component <basicprogramcomponent>
+   Quick Start component <quickstartcomponent> 
+   Say Hello Program <sayhelloprogram>
+   Variables <variables>
+   Deep Copy <deepcopy>
+   Implicit Conversion <implicitconversion>
+   Operators <operators>
+   Operators Precedence <operatorsprecedence>
+   Loop and Condition <loopandcondition>
+   Main Menu <mainmenu>
+   Dynamic Loop <dynamicloop>
+   Modify Lists <modifylists>
+   Exit from two loops <exitfromtwoloops>
+   The Loop Command <theloopcommand>
+   Short Circuit Evaluation <shortcircuitevaluation>
+   Using Functions <usingfunctions>
+   Variables Scope <variablesscope>
+   Visual Components <visualcomponents>
+   Resources <resources>

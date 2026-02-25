@@ -1,0 +1,297 @@
+.. index:: 
+	single: Using Functions; Using Functions
+
+========================
+Using Functions
+========================
+
+In this chapter we are going to learn about the Using Functions
+
+.. index:: 
+	pair: Using Functions; Introduction
+
+Introduction
+============
+
+We can create this program quickly using the Quick Start component
+
+.. image:: images/usingfunctions/ib_quickstart_usingfunctions.png
+        :alt: ib_quickstart_usingfunctions.png
+
+.. index:: 
+	pair: Using Functions; Program Steps
+
+Program Steps
+=============
+
+After selecting the (Using Functions) template, we will get the next steps in the Goal Designer
+
+.. image:: images/usingfunctions/gd_quickstart_usingfunctions.png
+        :alt: gd_quickstart_usingfunctions.png
+
+The Steps Tree:
+
+.. code-block:: none
+
+	first()
+	second()
+
+	sum(3,5)
+	sum(1000,2000)
+
+	Print fact(5) (New Line) 
+
+	If novalue() = NULL
+		Print the NoValue() function doesn't return a value (New Line) 
+	End of IF Statement
+
+	function first 
+		Print message from the first function (New Line) 
+	End of Function
+
+	function second 
+		Print message from the second function (New Line) 
+	End of Function
+
+	function sum x,y
+		Print x+y (New Line) 
+	End of Function
+
+	function fact x
+		If x = 0
+			Return 1
+		Else
+			Return x*fact(x-1)
+		End of IF Statement
+	End of Function
+
+	function novalue 
+	End of Function
+
+
+.. index:: 
+	pair: Using Functions; Creating the Program
+
+Creating the Program
+====================
+
+To create this program we will use the next components
+
+* Call Function
+* If Statement
+* Else
+* Define Function
+* Print Text
+* Return
+
+In the begining the Steps Tree is empty
+
+.. image:: images/usingfunctions/1.png
+		:alt: 1.png
+
+Call the first() function
+
+.. image:: images/usingfunctions/2.png
+		:alt: 2.png
+
+.. image:: images/usingfunctions/3.png
+		:alt: 3.png
+
+.. image:: images/usingfunctions/4.png
+		:alt: 4.png
+
+Call the Second() function
+
+.. image:: images/usingfunctions/5.png
+		:alt: 5.png
+
+.. image:: images/usingfunctions/6.png
+		:alt: 6.png
+
+.. image:: images/usingfunctions/7.png
+		:alt: 7.png
+
+Call the Sum() function - Send 3,5 as parameters
+
+.. image:: images/usingfunctions/8.png
+		:alt: 8.png
+
+.. image:: images/usingfunctions/9.png
+		:alt: 9.png
+
+.. image:: images/usingfunctions/10.png
+		:alt: 10.png
+
+Call the Sum() function - Send 1000,2000 as parameters
+
+.. image:: images/usingfunctions/11.png
+		:alt: 11.png
+
+.. image:: images/usingfunctions/12.png
+		:alt: 12.png
+
+.. image:: images/usingfunctions/13.png
+		:alt: 13.png
+
+Call the Fact() function - Send 5 as parameter
+
+.. image:: images/usingfunctions/14.png
+		:alt: 14.png
+
+.. image:: images/usingfunctions/15.png
+		:alt: 15.png
+
+.. image:: images/usingfunctions/16.png
+		:alt: 16.png
+
+Check the output of the NoValue() function
+
+.. image:: images/usingfunctions/17.png
+		:alt: 17.png
+
+.. image:: images/usingfunctions/18.png
+		:alt: 18.png
+
+.. image:: images/usingfunctions/19.png
+		:alt: 19.png
+
+Print a message using the (Print Text) component
+
+.. image:: images/usingfunctions/20.png
+		:alt: 20.png
+
+.. image:: images/usingfunctions/21.png
+		:alt: 21.png
+
+.. image:: images/usingfunctions/22.png
+		:alt: 22.png
+
+Define the First() function
+
+.. image:: images/usingfunctions/23.png
+		:alt: 23.png
+
+.. image:: images/usingfunctions/24.png
+		:alt: 24.png
+
+.. image:: images/usingfunctions/25.png
+		:alt: 25.png
+
+Print a message from the First() function
+
+.. image:: images/usingfunctions/26.png
+		:alt: 26.png
+
+.. image:: images/usingfunctions/27.png
+		:alt: 27.png
+
+.. image:: images/usingfunctions/28.png
+		:alt: 28.png
+
+Define the Second() function
+
+.. image:: images/usingfunctions/29.png
+		:alt: 29.png
+
+.. image:: images/usingfunctions/30.png
+		:alt: 30.png
+
+.. image:: images/usingfunctions/31.png
+		:alt: 31.png
+
+Print a message from the Second() function
+
+.. image:: images/usingfunctions/32.png
+		:alt: 32.png
+
+.. image:: images/usingfunctions/33.png
+		:alt: 33.png
+
+.. image:: images/usingfunctions/34.png
+		:alt: 34.png
+
+Define the Sum() function
+
+This function takes x,y as parameters
+
+The function will print the sum of x and y
+
+
+.. image:: images/usingfunctions/35.png
+		:alt: 35.png
+
+.. image:: images/usingfunctions/36.png
+		:alt: 36.png
+
+.. image:: images/usingfunctions/37.png
+		:alt: 37.png
+
+.. image:: images/usingfunctions/38.png
+		:alt: 38.png
+
+.. image:: images/usingfunctions/39.png
+		:alt: 39.png
+
+.. image:: images/usingfunctions/40.png
+		:alt: 40.png
+
+Define the Fact() function
+
+.. image:: images/usingfunctions/41.png
+		:alt: 41.png
+
+.. image:: images/usingfunctions/42.png
+		:alt: 42.png
+
+.. image:: images/usingfunctions/43.png
+		:alt: 43.png
+
+.. image:: images/usingfunctions/44.png
+		:alt: 44.png
+
+.. image:: images/usingfunctions/45.png
+		:alt: 45.png
+
+.. image:: images/usingfunctions/46.png
+		:alt: 46.png
+
+.. image:: images/usingfunctions/47.png
+		:alt: 47.png
+
+.. image:: images/usingfunctions/48.png
+		:alt: 48.png
+
+.. image:: images/usingfunctions/49.png
+		:alt: 49.png
+
+.. image:: images/usingfunctions/50.png
+		:alt: 50.png
+
+.. image:: images/usingfunctions/51.png
+		:alt: 51.png
+
+.. image:: images/usingfunctions/52.png
+		:alt: 52.png
+
+.. image:: images/usingfunctions/53.png
+		:alt: 53.png
+
+.. image:: images/usingfunctions/54.png
+		:alt: 54.png
+
+.. image:: images/usingfunctions/55.png
+		:alt: 55.png
+
+Define the NoValue() function
+
+.. image:: images/usingfunctions/56.png
+		:alt: 56.png
+
+.. image:: images/usingfunctions/57.png
+		:alt: 57.png
+
+Now we have the final Steps Tree in our program
+
+.. image:: images/usingfunctions/58.png
+		:alt: 58.png
+

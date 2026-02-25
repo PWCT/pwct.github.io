@@ -1,0 +1,841 @@
+.. index:: 
+	single: Getting Started; Introduction
+
+===============
+Getting Started
+===============
+
+
+In this chapter we are going to learn how to create our first application using PWCT
+
+.. index:: 
+	pair: Getting Started; The Main Window
+
+The Main Window
+===============
+
+When we run PWCT, The Main Window contains the next dockable windows
+
+* Components Browser
+* Project Files
+* Form Designer
+* Output Window
+* Goal Designer
+
+.. image:: images/mainwindow/p1.png
+	:alt: p1.png
+
+Components Browser 
+------------------
+
+1 - Using the Components Browser, We can select a component to use 
+
+2 - Each component could provide an Interaction Page (Data-Entry Window) 
+
+3 - The Component lead the steps generation process in the Steps Tree (Inside the Goal Designer)
+
+4 - The Component also generate the Textual source code in the background
+
+.. image:: images/mainwindow/components1.png
+	:alt: components1.png
+
+5 - We can search in the Components Tree by typing the Component name or some letters in the name
+
+For example, by typing the letter 'p' we can find the (Print Text) component
+
+.. image:: images/mainwindow/components2.png
+	:alt: components2.png
+
+6 - To use the component after selecting it, Press (Enter) or (Double Click) using the Mouse
+
+Project Files
+-------------
+
+Using the Project Files window, We can open visual source files quickly!
+
+.. image:: images/mainwindow/projectfiles1.png
+	:alt: projectfiles1.png
+
+For example, We can open the file (tetris.pwct) which contains the Tetris game!
+
+To run this game we can click on the Run button in the Main Toolbar (Ctrl+F5)
+
+.. image:: images/mainwindow/projectfiles2.png
+	:alt: projectfiles2.png
+
+Form Designer
+-------------
+
+Using the Form Designer, We can design the application forms (User Interface)
+
+.. image:: images/mainwindow/formdesigner1.png
+	:alt: formdesigner1.png
+
+For example, The User Interface of the Desktop Screen Shot application is designed using the Form Designer
+
+.. image:: images/mainwindow/formdesigner2.png
+	:alt: formdesigner2.png
+
+Output Window
+------------- 
+
+Using the Output Window, We can see the programs output!
+
+.. image:: images/mainwindow/outputwindow1.png
+	:alt: outputwindow1.png
+
+Also we can provide the required input for console applications
+
+For example, The next console application ask about the User Name!
+
+We can type the name in the Textbox then press (Enter) or click on the (Send) button
+
+.. image:: images/mainwindow/outputwindow2.png
+	:alt: outputwindow2.png
+
+Goal Designer 
+-------------
+
+.. image:: images/mainwindow/p2.png
+	:alt: p2.png
+
+1 - Contains the Steps Tree that represent the logic behind our program
+
+2 - Contains buttons that we can use to control the steps tree
+
+3 - Contains the Time Machine
+
+3.1 - Support running the program in the past
+
+3.2 - Support playing the program as movie
+
+.. index:: 
+	pair: Getting Started; Hello World Program
+
+Hello World Program
+===================
+
+In this section we will learn how to create the (Hello, World!) program
+
+Section Contents:
+
+(1) How to create the program using the Mouse
+(2) The Steps Summary
+(3) How to create the program using the Keyboard Shortcuts
+
+Hello World Program (Using the Mouse)
+-------------------------------------
+
+From the Components Browser, Select the (Print Text) component
+
+Then double click using the Mouse
+
+.. image:: images/helloworld/p1.png
+	:alt: p1.png
+
+After selecting the component, an interaction page will appears in the Goal Designer
+
+Using this Interaction Page we can determine the text that will be printed on the screen
+
+Type: Hello, World!
+
+Then click the (Ok) button
+
+.. image:: images/helloworld/p2.png
+	:alt: p2.png
+
+This will generate the next step in the Goal Designer Window
+
+.. image:: images/helloworld/p3.png
+	:alt: p3.png
+
+Now we can run the program and see the program output
+
+To run the program click on the (Run) button from the Main Toolbar
+
+.. image:: images/helloworld/p4.png
+	:alt: p4.png
+
+The next output will appears in the Output Window
+
+.. image:: images/helloworld/p5.png
+	:alt: p5.png
+
+Hello World Program (Steps Summary)
+-----------------------------------
+
+1. Select (Print Text) from the Components Browser
+2. Enter (Hello, World!) then click (Ok) in the Interaction Page
+3. Click (Run) from the Main Toolbar
+
+.. image:: images/concept/hello.png
+	:alt: hello.png
+
+
+Hello World Program (Using the Keyboard)
+----------------------------------------
+
+* Inside the Goal Designer window press the letter 'p'
+* The Search Textbox will be active, and the pressed letter will be written there
+* This will select the (Print Text) component
+* Press (Enter) to use the (Print Text) Component
+* Write (Hello, World!) then press CTRL+W (Similar to clicking on the OK button)
+* Press CTRL+F5 to run the program!
+
+.. tip:: Pressing any letter inside the Goal Designer will move us to the Components Browser
+
+.. index:: 
+	pair: Getting Started; Using the Goal Designer
+
+Using the Goal Designer
+=======================
+
+In this section we will learn about using the Goal Designer
+
+Section contents:
+
+* Copy & Paste the Steps
+* Modify the Steps
+* Using the Time Machine
+* Moving Steps Up & Down
+* Cut & Paste Steps
+* Inserting Steps
+* Comment/Uncomment Steps
+* Deleting Steps
+* Search and Replace
+* Using the Again Button
+
+.. index:: 
+	pair: Getting Started; Copy & Paste the Steps
+
+Copy & Paste the Steps
+----------------------
+
+Select the step (Print Hello, World!) then click on the (Copy) button or press Ctrl+C
+
+.. image:: images/helloworld/copypaste1.png
+	:alt: copypaste1.png
+
+Now select the Start Point then click on the (Paste) button or press Ctrl+V
+
+.. image:: images/helloworld/copypaste2.png
+	:alt: copypaste2.png
+
+We can do the paste operation many times
+
+.. image:: images/helloworld/copypaste3.png
+	:alt: copypaste3.png
+
+Now when we run the program using Ctrl+F5 we can see the (Hello, World!) message printed seven times
+
+Sure it's not the right way to program something like this because it's better to use a For-Loop
+
+.. image:: images/helloworld/copypaste4.png
+	:alt: copypaste4.png
+
+
+
+.. index:: 
+	pair: Getting Started; Modify the Steps
+
+Modify the Steps
+----------------
+
+To modify a step, We can click on the (Modify) button or press Ctrl+E or double click on the step.
+
+Select the first step, Then press Ctrl+E
+
+.. image:: images/helloworld/modify1.png
+	:alt: modify1.png
+
+Change the Text from (Hello, World!) to (one) then press Ctrl+W
+
+.. image:: images/helloworld/modify2.png
+	:alt: modify2.png
+
+Change all of the steps to print the numbers from (one) to (seven)
+
+Then run the program using Ctrl+F5
+
+.. image:: images/helloworld/modify3.png
+	:alt: modify3.png
+
+.. index:: 
+	pair: Getting Started; Using the Time Machine
+
+Using the Time Machine
+----------------------
+
+Inside the Goal Designer and using The Time Machine Slider we can move backward along the Time Dimension
+
+For example, At this point in the past we have three steps only 
+
+.. image:: images/helloworld/time1.png
+	:alt: time1.png
+
+We can run the program in the past using Ctrl+F5
+
+This will print (one two three) - Each word in separate line
+
+.. image:: images/helloworld/time2.png
+	:alt: time2.png
+
+We can move forward and go to the present where we have all of the seven steps
+
+Also we can click on the (Play) button to play the program as movie
+
+This will create the program step-by-step to learn how to generate each step 
+
+This will display the selected component in the Components Browser and the Interaction Pages too!
+
+.. image:: images/helloworld/time3.png
+	:alt: time3.png
+
+
+For example, at this point in the past, Nothing exist!
+
+.. image:: images/helloworld/time4.png
+	:alt: time4.png
+
+While at this point we have two steps 
+
+.. image:: images/helloworld/time5.png
+	:alt: time5.png
+
+
+.. index:: 
+	pair: Getting Started; Moving Steps Up & Down
+
+Moving Steps Up & Down
+----------------------
+
+We can change the order of the steps inside the Steps Tree using the Up & Down buttons
+
+For Example, Select the step (Print seven) then click on the Up button or press Ctrl+U
+
+.. image:: images/helloworld/moveup1.png
+	:alt: moveup1.png
+
+Now we see the (Print seven) comes before (Print six)
+
+.. image:: images/helloworld/moveup2.png
+	:alt: moveup2.png
+
+Click on the Up button many times until the (Print seven) step becomes the first step
+
+Then run the program using Ctrl+F5
+
+.. image:: images/helloworld/moveup3.png
+	:alt: moveup3.png
+
+
+.. index:: 
+	pair: Getting Started; Cut & Paste Steps
+
+Cut & Paste Steps
+-----------------
+
+Select the (Print seven) step then click on the (Cut) button or press Ctrl+X
+
+.. image:: images/helloworld/cut1.png
+	:alt: cut1.png
+
+Select the (Start Point) then click on the (Paste) button or press Ctrl+V
+
+.. image:: images/helloworld/cut2.png
+	:alt: cut2.png
+
+This will paste the (Print seven) step after the (Print six) step 
+
+Run the program using Ctrl+F5
+
+.. image:: images/helloworld/cut3.png
+	:alt: cut3.png
+
+
+.. index:: 
+	pair: Getting Started; Inserting Steps
+
+Inserting Steps
+---------------
+
+To insert a new step after the (Print three) step
+
+At first select the (Print three) step then start a new interaction process
+
+Start using the (Print Text) component
+
+.. image:: images/helloworld/insert1.png
+	:alt: insert1.png
+
+The new generated step will be added directly after the (Print three) step
+
+.. image:: images/helloworld/insert2.png
+	:alt: insert2.png
+
+.. index:: 
+	pair: Getting Started; Comment/Uncomment Steps
+
+Comment/Uncomment Steps
+-----------------------
+
+To comment a step, Select it first then click on the (Comment/Uncomment) button or press Ctrl+I
+
+.. image:: images/helloworld/comment1.png
+	:alt: comment1.png
+
+The commented step will not be executed when we run the program 
+
+.. image:: images/helloworld/comment2.png
+	:alt: comment2.png
+
+To enable the step again (Uncomment), select it then click on the (Comment/Uncomment) button
+
+.. image:: images/helloworld/comment3.png
+	:alt: comment3.png
+
+
+.. index:: 
+	pair: Getting Started; Deleting Steps
+
+Deleting Steps
+--------------
+
+To delete a step, select it then click on the (Delete) button 
+
+.. image:: images/helloworld/deletestep1.png
+	:alt: deletestep1.png
+
+Click (Yes) or press (Enter) to delete the step
+
+.. image:: images/helloworld/deletestep2.png
+	:alt: deletestep2.png
+
+.. index:: 
+	pair: Getting Started; Search and Replace
+
+Search and Replace
+------------------
+
+To find a step, click the (Search) button or press Ctrl+F
+
+.. image:: images/helloworld/search1.png
+	:alt: search1.png
+
+For example, In the Search window type the letter "o" then click (Search) or press Enter
+
+Once we select a step from the Results Listbox, this step will be the active step in the Steps Tree
+
+.. image:: images/helloworld/search2.png
+	:alt: search2.png
+
+We can replace the text with another text
+
+.. image:: images/helloworld/search3.png
+	:alt: search3.png
+
+For example replace (seven) with ( ** seven ** ) then click the (Replace) button
+
+.. image:: images/helloworld/search4.png
+	:alt: search4.png
+
+Then run the program using Ctrl+F5 to see the change in the output
+
+.. image:: images/helloworld/search5.png
+	:alt: search5.png
+
+.. index:: 
+	pair: Getting Started; Using the Again Button
+
+Using the Again Button
+----------------------
+
+We can use the same component many times using the (Again) button
+
+For example, when we use the (Print Text) component, and after writing the text (eight) click (Again) instead of (Ok)
+
+.. image:: images/helloworld/again1.png
+	:alt: again1.png
+
+This will generate the step (Print eight) in the steps tree 
+
+Also we can use the interaction page to write another text like (nine)
+
+Click (again) 
+
+.. image:: images/helloworld/again2.png
+	:alt: again2.png
+
+Now we have the step (Print nine) in the Steps Tree
+
+This time we will write (ten) then click (Ok) or press Ctrl+W
+
+.. image:: images/helloworld/again3.png
+	:alt: again3.png
+
+Run the program using Ctrl+F5 to see the output
+
+.. image:: images/helloworld/again4.png
+	:alt: again4.png
+
+.. index:: 
+	pair: Getting Started; Undo
+
+Undo
+----
+
+If we did something wrong in the Steps Tree (Like deleting a step) we can cancel this using Ctrl+Z
+
+Also we can select (Undo) from the (Edit) menu instead of pressing Ctrl+Z
+
+.. index:: 
+	pair: Getting Started; Visual Source Files
+
+Visual Source Files
+===================
+
+In this section we will learn about the Visual Source Files ( *.pwct )
+
+Section contents:
+
+* Saving the file
+* Opening the file
+* Starting new file
+
+.. index:: 
+	pair: Getting Started; Saving the file
+
+Saving the file
+---------------
+
+To save the file, Click on the (Save) button from the Main Toolbar or press Ctrl+S
+
+.. image:: images/helloworld/save1.png
+	:alt: save1.png
+
+Select the folder, or create a new folder
+
+For example : pwct2/applications/myprograms
+
+Then type the file name : program1
+
+The saved file will be progam1.pwct
+
+.. image:: images/helloworld/save2.png
+	:alt: save2.png
+
+After saving the file, the file name will be used as the window title in the Goal Designer
+
+.. image:: images/helloworld/save3.png
+	:alt: save3.png
+
+.. index:: 
+	pair: Getting Started; Opening the file
+
+Opening the file
+----------------
+
+To open a file, click on the (Open) button from the Main Toolbar
+
+.. image:: images/helloworld/open1.png
+	:alt: open1.png
+
+Select the file, for example: program1.pwct
+
+.. image:: images/helloworld/open2.png
+	:alt: open2.png
+
+Also we can open the files using the Project Files window
+
+Just go to the folder and select the file
+
+.. image:: images/helloworld/open3.png
+	:alt: open3.png
+
+.. index:: 
+	pair: Getting Started; Starting new file
+
+Starting new file
+-----------------
+
+To start a new file, From the (File) menu, select (New) or press Ctrl+Alt+N
+
+Another way is to click on the (New) button from the Main toolbar
+
+.. image:: images/helloworld/newfile.png
+	:alt: newfile.png
+
+The new file name will be (noname.pwct)
+
+To change the file name click (Save) 
+
+
+.. index:: 
+	pair: Getting Started; Save As
+
+Save As
+-------
+
+Using (Save As) we can save the file using another name
+
+.. image:: images/helloworld/saveas.png
+	:alt: saveas.png
+
+.. index:: 
+	pair: Getting Started; Printing the file
+
+Printing the file
+-----------------
+
+To print the file press Ctrl+P or select (Print to PDF) from the file menu
+
+We can print the Steps Tree
+
+.. image:: images/helloworld/print1.png
+	:alt: print1.png
+
+Also we can print the textual source code
+
+.. image:: images/helloworld/print2.png
+	:alt: print2.png
+
+.. tip:: We can copy the text that represent the Steps Tree or the Source Code and paste it in our discussions in Online Forums
+
+
+.. index:: 
+	pair: Getting Started; Go to line
+
+Go to line
+----------
+
+Each visual source file ( *.pwct ) represent a textural source code file 
+
+Sometimes we want to select a step inside the Steps Tree that represent a specific line in the textual source code
+
+This is useful if we have a runtime error in a specific line of source code
+
+Using (Go to line) from the (Edit) menu, we can do that
+
+.. tip:: We can open the (Go to line) window using Ctrl+G
+
+.. note:: Each step in the Step Tree could repsent one or many of textural source code lines
+
+.. image:: images/helloworld/gotoline.png
+	:alt: gotoline.png
+
+
+.. index:: 
+	pair: Getting Started; Customization
+
+Customization
+=============
+
+In this section we will learn about the customization of the PWCT Environment
+
+Section contents:
+
+* View Menu
+* Customization Window
+
+.. index:: 
+	pair: Getting Started; View Menu
+
+View Menu
+---------
+
+From the View menu we can navigate quickly to the different dockable windows
+
+Also we have keyboard shortcuts to do the navigation quickly
+
+* To activate the Project Files window press Alt+P
+* To activate the Goal Designer window press Alt+G
+* To activate the Output window press Alt+O
+
+From the (Appearance) submenu we can show/hide the different windows and toolbars
+
+.. image:: images/helloworld/cust1.png
+	:alt: cust1.png
+
+From the (Mode) submenu we can quickly arrange the dockable windows
+
+.. image:: images/helloworld/cust2.png
+	:alt: cust2.png
+
+From the (Style) submenu we can change the theme
+
+.. image:: images/helloworld/cust3.png
+	:alt: cust3.png
+
+.. index:: 
+	pair: Getting Started; Customization Window
+
+Customization Window
+--------------------
+
+To open the Customization window, From the (Edit) menu select(Customization) or Press Alt+C 
+
+From this window we can change the Steps Tree colors
+
+.. image:: images/helloworld/cust4.png
+	:alt: cust4.png
+
+Also we have more options that control the behavior of the PWCT environment
+
+.. image:: images/helloworld/cust5.png
+	:alt: cust5.png
+
+
+.. index:: 
+	pair: Getting Started; Run Programs
+
+Run Programs
+============
+
+We can run programs using the Program menu or using the Toolbars
+
+Also we can use the Keyboard shortcuts
+
+.. index:: 
+	pair: Getting Started; Program Menu
+
+Program Menu
+------------
+
+From the Program menu, we can run the current opened file using different options
+
+Also we can run the Main file in the project
+
+.. image:: images/helloworld/programmenu1.png
+	:alt: programmenu1.png
+
+Selecting (Debug - Run then wait) will display the output in the command prompt window
+
+After running the program, the pause command will be executed so we can see the output
+
+.. image:: images/helloworld/programmenu2.png
+	:alt: programmenu2.png
+
+Also we have the (Run web application) option that we can use during web development
+
+Also we have this option in the Main toolbar 
+
+.. image:: images/helloworld/programmenu3.png
+	:alt: programmenu3.png
+
+For example, the next program display (Hello, World) in the web browser
+
+.. image:: images/helloworld/programmenu4.png
+	:alt: programmenu4.png
+
+Main File toolbar
+-----------------
+
+The program menu contains options for using the (Main File)
+
+When we have a project that contains many visual source files, we can select one of these files as the Main file that we can use to run the project
+
+For example we select (goldmagic800.pwct) as the main file, This file generate (goldmagic800.ring)
+
+.. image:: images/helloworld/programmenu5.png
+	:alt: programmenu5.png
+
+We can run the main file while opening other files in the project
+
+.. image:: images/helloworld/programmenu6.png
+	:alt: programmenu6.png
+
+
+.. index:: 
+	pair: Getting Started; More Options
+
+More Options
+============
+
+In this section we will learn more about the features and resources provided by the PWCT Environment
+
+Section contents:
+
+* Tools Menu
+* Distribute Menu
+* Help Menu
+
+.. index:: 
+	pair: Getting Started; Tools Menu
+
+Tools Menu
+----------
+
+From the tools menu we can run the Form Designer or the RingREPL (Read-Eval-Print-Loop)
+
+Also we can open the Command Prompt or the Files Explorer
+
+.. image:: images/helloworld/tools1.png
+	:alt: tools1.png
+
+When we open the Command Prompt, the current directory will be the folder of the opened visual source file
+
+.. image:: images/helloworld/tools2.png
+	:alt: tools2.png
+
+Also when we open the Files Explorer, the current directory will be the folder of the opened file
+
+.. image:: images/helloworld/tools3.png
+	:alt: tools3.png
+
+When we run RingREPL we can write and execute Ring code directly
+
+.. image:: images/helloworld/tools4.png
+	:alt: tools4.png
+
+For example, We can write and execute the next program that print a message on the screen
+
+.. code-block:: ring
+
+	? "Hello, World!"
+
+.. image:: images/helloworld/tools5.png
+	:alt: tools5.png
+
+We have also the GUI version of RingREPL
+
+.. image:: images/helloworld/tools6.png
+	:alt: tools6.png
+
+This version comes with the History option that contains the previous commands
+
+.. image:: images/helloworld/tools7.png
+	:alt: tools7.png
+
+.. index:: 
+	pair: Getting Started; Distribute Menu
+
+Distribute Menu
+---------------
+
+Using the Distribute menu we can distribute or applications and build executable files
+
+.. image:: images/helloworld/distribute1.png
+	:alt: distribute1.png
+
+For example, we can build (program1.exe) for our program
+
+.. image:: images/helloworld/distribute2.png
+	:alt: distribute2.png
+
+We can run (program1.exe) from the command prompt and see the output
+
+.. image:: images/helloworld/distribute3.png
+	:alt: distribute3.png
+
+.. index:: 
+	pair: Getting Started; Help Menu
+
+Help Menu
+---------
+
+Using the Help menu we can open PWCT or Ring documentation
+
+The documentation comes in different formats like CHM & PDF
+
+.. image:: images/helloworld/helpmenu1.png
+	:alt: helpmenu1.png

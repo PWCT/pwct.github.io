@@ -1,0 +1,286 @@
+.. index:: 
+	single: Variables; Using Variables
+
+===============
+Using Variables
+===============
+
+In this chapter we are going to learn how to use the Variables 
+
+To create a new variable, you just need to determine the variable name & value.
+The value will determine the variable type and you can change the value to
+switch between the types using the same variable name.
+
+Generated Step:
+
+.. code-block:: none
+	
+	<Variable Name> = <Value>
+
+.. tip:: 
+	
+	The operator '=' is used here as an Assignment operator and the same
+	operator can be used in conditions, but for testing equality of expressions.
+
+.. note:: 
+	
+	The Variable will contains the real value (not a reference).
+	This means that once you change the variable value, the old value will
+	be removed from memory (even if the variable contains a list or object).
+
+
+The variable type is based on the value, and this value could be
+
+* String (One Character, Many Characters, Many Lines, Binary Data)
+* Number (Signed Integer, Unsigned Integer, Double, Boolean)
+* List (List of one type, List of many types, Nested Lists)
+* Object
+
+.. index:: 
+	pair: Variables; Introduction
+
+Introduction
+============
+
+We will create a simple program to learn how to use the Variables
+
+We can create this program quickly using the Quick Start component
+
+.. image:: images/variables/ib_quickstart_variables.png
+        :alt: ib_quickstart_variables.png
+
+.. index:: 
+	pair: Variables; Program Steps
+
+Program Steps
+=============
+
+After selecting the (Variables) template, we will get the next steps in the Goal Designer
+
+.. image:: images/variables/gd_quickstart_variables.png
+        :alt: gd_quickstart_variables.png
+
+.. index:: 
+	pair: Variables; Creating the Program
+
+Creating the Program
+====================
+
+To create this program we will use the next components
+
+* Assignment 
+* Print Text
+
+At first we will define a variable called X
+
+The Variable value will be "Hello" which is a String
+
+In the begining the Steps Tree is empty
+
+.. image:: images/variables/1.png
+		:alt: 1.png
+
+Select the (Assignment) component
+
+.. image:: images/variables/2.png
+		:alt: 2.png
+
+Enter the data in the Interaction Page
+
+Left Side: X
+
+Right Side: "Hello"
+
+.. image:: images/variables/3.png
+		:alt: 3.png
+
+A new step will be added to the Steps Tree
+
+.. image:: images/variables/4.png
+		:alt: 4.png
+
+Let's print the variable using the (Print Text) component
+
+.. image:: images/variables/5.png
+		:alt: 5.png
+
+Enter the data in the Interaction Page
+
+Text: X
+
+Type: Expression
+
+.. image:: images/variables/6.png
+		:alt: 6.png
+
+The Steps Tree is updated!
+
+.. image:: images/variables/7.png
+		:alt: 7.png
+
+Now we will set X to 5
+
+X type will be a Number (The type is based on the value)
+
+.. image:: images/variables/8.png
+		:alt: 8.png
+
+Enter the data in the Interaction Page
+
+Left Side: X
+
+Right Side: 5
+
+.. image:: images/variables/9.png
+		:alt: 9.png
+
+The Steps Tree is updated!
+
+.. image:: images/variables/10.png
+		:alt: 10.png
+
+Let's print the variable using the (Print Text) component
+
+.. image:: images/variables/11.png
+		:alt: 11.png
+
+.. image:: images/variables/12.png
+		:alt: 12.png
+
+.. image:: images/variables/13.png
+		:alt: 13.png
+
+Set X to 1.2
+
+.. image:: images/variables/14.png
+		:alt: 14.png
+
+.. image:: images/variables/15.png
+		:alt: 15.png
+
+.. image:: images/variables/16.png
+		:alt: 16.png
+
+We will print the X value
+
+.. image:: images/variables/17.png
+		:alt: 17.png
+
+.. image:: images/variables/18.png
+		:alt: 18.png
+
+.. image:: images/variables/19.png
+		:alt: 19.png
+
+X will be a List of four items [1,2,3,4]
+
+.. image:: images/variables/20.png
+		:alt: 20.png
+
+.. image:: images/variables/21.png
+		:alt: 21.png
+
+.. image:: images/variables/22.png
+		:alt: 22.png
+
+Print the X value
+
+.. image:: images/variables/23.png
+		:alt: 23.png
+
+.. image:: images/variables/24.png
+		:alt: 24.png
+
+.. image:: images/variables/25.png
+		:alt: 25.png
+
+X will be a String that contains the Date
+
+.. image:: images/variables/26.png
+		:alt: 26.png
+
+.. image:: images/variables/27.png
+		:alt: 27.png
+
+.. image:: images/variables/28.png
+		:alt: 28.png
+
+Print X value (The Date)
+
+.. image:: images/variables/29.png
+		:alt: 29.png
+
+.. image:: images/variables/30.png
+		:alt: 30.png
+
+.. image:: images/variables/31.png
+		:alt: 31.png
+
+X will be a String contains the Time
+
+.. image:: images/variables/32.png
+		:alt: 32.png
+
+.. image:: images/variables/33.png
+		:alt: 33.png
+
+.. image:: images/variables/34.png
+		:alt: 34.png
+
+Print X value (The Time)
+
+.. image:: images/variables/35.png
+		:alt: 35.png
+
+.. image:: images/variables/36.png
+		:alt: 36.png
+
+.. image:: images/variables/37.png
+		:alt: 37.png
+
+X will be True (Number: 1)
+
+.. image:: images/variables/38.png
+		:alt: 38.png
+
+.. image:: images/variables/39.png
+		:alt: 39.png
+
+.. image:: images/variables/40.png
+		:alt: 40.png
+
+Print X value (Will print 1)
+
+.. image:: images/variables/41.png
+		:alt: 41.png
+
+.. image:: images/variables/42.png
+		:alt: 42.png
+
+.. image:: images/variables/43.png
+		:alt: 43.png
+
+X will be False (Number: 0)
+
+.. image:: images/variables/44.png
+		:alt: 44.png
+
+.. image:: images/variables/45.png
+		:alt: 45.png
+
+.. image:: images/variables/46.png
+		:alt: 46.png
+
+Print X value (Will print 0)
+
+.. image:: images/variables/47.png
+		:alt: 47.png
+
+.. image:: images/variables/48.png
+		:alt: 48.png
+
+Now we have the final Steps Tree in our program
+
+.. image:: images/variables/49.png
+		:alt: 49.png
+

@@ -1,0 +1,223 @@
+.. index:: 
+	single: Control Structures Components; Control Structures Components
+
+=============================
+Control Structures Components
+=============================
+
+In this chapter we are going to learn about the Control Structures Components
+
+.. index:: 
+	pair: Control Structures Components; Introduction
+
+Introduction
+============
+
+These components could be used to take decisions and separate the execution to different branches where one of these brances will be executed based on the evaluation result of specific conditions
+
+Also it can be used to repeat the execution of specific commands
+
+.. image:: images/controlstructurescomponents/cb_controlstructures.png
+        :alt: Control Structures Components
+
+We have many components in this category:
+
+* If Statement
+* Else 
+* Else If
+* Switch
+* Case
+* Else (Other)
+* For Loop
+* For In Loop
+* While Loop
+* Do Again Loop
+* Try Catch
+* Exit Command
+* Loop Command
+
+.. index:: 
+	pair: Control Structures Components; If Statement
+
+If Statement
+============
+
+In the Interaction Page we can determine the Condition
+
+.. image:: images/controlstructurescomponents/ib_controlstructures_ifstatement.png
+        :alt: If Statement
+
+
+For example, if the condition is (x=1) the next steps will be generated in the Steps Tree
+
+.. image:: images/controlstructurescomponents/gd_controlstructures_ifstatement2.png
+        :alt: If Statement
+
+Sure, This is not a complete program, and will lead to runtime error because the x variable is not defined!
+
+.. index:: 
+	pair: Control Structures Components; Else
+
+Else
+====
+
+Using (Else) We can determine what to do if the (If Statement & Else If Statements) conditions are not True 
+
+.. image:: images/controlstructurescomponents/gd_controlstructures_else.png
+        :alt: Else
+
+Example:
+
+.. image:: images/controlstructurescomponents/gd_controlstructures_else2.png
+        :alt: Else
+
+
+.. index:: 
+	pair: Control Structures Components; Else If
+
+Else If
+=======
+
+Using many (Else If) statements, we can evaluate different conditions 
+
+In the Interaction Page we can determine the condition
+
+.. image:: images/controlstructurescomponents/ib_controlstructures_elseif.png
+        :alt: Else If
+
+In the next example, We have the X variable and we use (If Statement) and (Else if) statements to determine what to do based on the variable value
+
+.. image:: images/controlstructurescomponents/gd_controlstructures_elseif2.png
+        :alt: Else If
+
+.. index:: 
+	pair: Control Structures Components; Switch
+
+Switch
+======
+
+Using the Switch component we can take decision based on the different values of a variable.
+
+We will create the next example:
+
+.. code-block:: none
+
+	x = 10
+	Switch x
+		Case 1
+			Print One (New Line) 
+		Case 10
+			Print Ten (New Line) 
+		Else
+			Print Other Number! (New Line) 
+	End of Switch
+
+
+Start new program 
+
+.. image:: images/controlstructurescomponents/switch/1.png
+		:alt: 1.png
+
+
+Define the X variable, and set X to 10
+
+.. image:: images/controlstructurescomponents/switch/2.png
+		:alt: 2.png
+
+.. image:: images/controlstructurescomponents/switch/3.png
+		:alt: 3.png
+
+This will generate the next step
+
+.. image:: images/controlstructurescomponents/switch/4.png
+		:alt: 4.png
+
+Start using the Switch component
+
+.. image:: images/controlstructurescomponents/switch/5.png
+		:alt: 5.png
+
+.. image:: images/controlstructurescomponents/switch/6.png
+		:alt: 6.png
+
+.. image:: images/controlstructurescomponents/switch/7.png
+		:alt: 7.png
+
+Now we can handle the different cases
+
+.. index:: 
+	pair: Control Structures Components; Case
+
+Case
+====
+
+
+The next steps check if x = 1 
+
+.. image:: images/controlstructurescomponents/switch/8.png
+		:alt: 8.png
+
+.. image:: images/controlstructurescomponents/switch/9.png
+		:alt: 9.png
+
+.. image:: images/controlstructurescomponents/switch/10.png
+		:alt: 10.png
+
+In this case we will print (one)
+
+.. image:: images/controlstructurescomponents/switch/11.png
+		:alt: 11.png
+
+.. image:: images/controlstructurescomponents/switch/12.png
+		:alt: 12.png
+
+.. image:: images/controlstructurescomponents/switch/13.png
+		:alt: 13.png
+
+The next steps check if x = 10
+
+.. image:: images/controlstructurescomponents/switch/14.png
+		:alt: 14.png
+
+.. image:: images/controlstructurescomponents/switch/15.png
+		:alt: 15.png
+
+.. image:: images/controlstructurescomponents/switch/16.png
+		:alt: 16.png
+
+In this case we print (Ten)
+
+.. image:: images/controlstructurescomponents/switch/17.png
+		:alt: 17.png
+
+.. image:: images/controlstructurescomponents/switch/18.png
+		:alt: 18.png
+
+.. image:: images/controlstructurescomponents/switch/19.png
+		:alt: 19.png
+
+.. index:: 
+	pair: Control Structures Components; Else (Other)
+
+Else (Other)
+============
+
+Using the Else (Other) component we can check the other cases
+
+.. image:: images/controlstructurescomponents/switch/20.png
+		:alt: 20.png
+
+.. image:: images/controlstructurescomponents/switch/22.png
+		:alt: 22.png
+
+In this case we print (Other Number!)
+
+.. image:: images/controlstructurescomponents/switch/23.png
+		:alt: 23.png
+
+.. image:: images/controlstructurescomponents/switch/24.png
+		:alt: 24.png
+
+.. image:: images/controlstructurescomponents/switch/25.png
+		:alt: 25.png
+
