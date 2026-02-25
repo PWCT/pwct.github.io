@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWCT2 — Programming Without Coding Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pw-bg: #ffffff;
+            --pw-bg-alt: #f0f5ff;
+            --pw-bg-soft: #f7faff;
+            --pw-surface: #ffffff;
+            --pw-surface2: #f4f8ff;
+            --pw-blue1: #1a6dff;
+            --pw-blue2: #0099ff;
+            --pw-blue3: #4f46e5;
+            --pw-sky: #38bdf8;
+            --pw-warm: #f97316;
+            --pw-text: #1e293b;
+            --pw-text-light: #334155;
+            --pw-muted: #64748b;
+            --pw-border: rgba(30,80,180,0.08);
+            --pw-shadow: 0 4px 24px rgba(30,80,180,0.08);
+            --pw-shadow-lg: 0 16px 48px rgba(30,80,180,0.12);
+            --grad-hero: linear-gradient(135deg, #e0ecff 0%, #f0f5ff 30%, #ffffff 60%, #e8f4ff 100%);
+            --grad-blue: linear-gradient(135deg, #1a6dff, #0099ff);
+            --grad-subtle: linear-gradient(180deg, #f0f5ff, #ffffff);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--pw-bg);
+            color: var(--pw-text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--pw-blue1);
+            color: white;
+        }
+
+        /* ── Scrollbar ── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f0f5ff; }
+        ::-webkit-scrollbar-thumb { background: var(--pw-blue2); border-radius: 3px; }
+
+        /* ── Typography ── */
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .font-serif { font-family: 'Instrument Serif', serif; }
+        .text-accent { color: var(--pw-blue1) !important; }
+        .text-accent2 { color: var(--pw-blue2) !important; }
+        .text-accent3 { color: var(--pw-blue3) !important; }
+        .text-warm { color: var(--pw-warm) !important; }
+        .text-muted-custom { color: var(--pw-muted) !important; }
+
+        /* ── Navigation ── */
+        .navbar-pwct {
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--pw-border);
+            padding: 1rem 0;
+            transition: all 0.4s ease;
+        }
+        .navbar-pwct.scrolled {
+            padding: 0.6rem 0;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 20px rgba(30,80,180,0.06);
+        }
+        .navbar-brand-pwct {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--pw-text) !important;
+            letter-spacing: -0.02em;
+        }
+        .navbar-brand-pwct span {
+            background: var(--grad-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-link-pwct {
+            color: var(--pw-muted) !important;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s;
+        }
+        .nav-link-pwct:hover { color: var(--pw-blue1) !important; }
+        .nav-btn-github {
+            background: var(--pw-text);
+            border: none;
+            color: white !important;
+            border-radius: 8px;
+            padding: 0.45rem 1.2rem !important;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .nav-btn-github:hover {
+            background: var(--pw-blue3);
+            transform: translateY(-1px);
+        }
+
+        /* ── Hero ── */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 8rem 0 6rem;
+            overflow: hidden;
+            background: var(--grad-hero);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -15%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(26,109,255,0.1) 0%, transparent 65%);
+            animation: float1 20s ease-in-out infinite;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            right: -10%;
+            width: 55%;
+            height: 55%;
+            background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 65%);
+            animation: float2 25s ease-in-out infinite;
+        }
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(5%, 8%); }
+            66% { transform: translate(-3%, -5%); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(-6%, -4%); }
+            66% { transform: translate(4%, 7%); }
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(26,109,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(26,109,255,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%);
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(26,109,255,0.07);
+            border: 1px solid rgba(26,109,255,0.15);
+            border-radius: 100px;
+            padding: 0.4rem 1.2rem 0.4rem 0.7rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--pw-blue1);
+            margin-bottom: 2rem;
+            animation: fadeSlideUp 0.8s ease-out;
+        }
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--pw-blue1);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(26,109,255,0.4); }
+            50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(26,109,255,0); }
+        }
+        .hero-title {
+            font-size: clamp(3rem, 6.5vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+            margin-bottom: 1.8rem;
+            color: var(--pw-text);
+            animation: fadeSlideUp 0.8s ease-out 0.15s both;
+        }
+        .hero-title .accent-word {
+            background: var(--grad-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-title .serif-word {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--pw-blue3);
+            -webkit-text-fill-color: var(--pw-blue3);
+        }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--pw-muted);
+            line-height: 1.7;
+            max-width: 520px;
+            margin-bottom: 2.5rem;
+            animation: fadeSlideUp 0.8s ease-out 0.3s both;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeSlideUp 0.8s ease-out 0.45s both;
+        }
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Buttons ── */
+        .btn-primary-pwct {
+            background: var(--grad-blue);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 0.85rem 2rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary-pwct::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .btn-primary-pwct:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(26,109,255,0.3);
+            color: white;
+        }
+        .btn-primary-pwct:hover::before { opacity: 1; }
+
+        .btn-secondary-pwct {
+            background: white;
+            color: var(--pw-text);
+            border: 1px solid rgba(30,80,180,0.15);
+            border-radius: 10px;
+            padding: 0.85rem 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn-secondary-pwct:hover {
+            background: var(--pw-bg-alt);
+            border-color: rgba(26,109,255,0.3);
+            color: var(--pw-blue1);
+            transform: translateY(-2px);
+            box-shadow: var(--pw-shadow);
+        }
+
+        .btn-steam {
+            background: linear-gradient(135deg, #1b2838, #2a475e);
+            color: #c7d5e0 !important;
+            border: none;
+            border-radius: 10px;
+            padding: 0.85rem 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn-steam:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(27,40,56,0.35);
+            color: white !important;
+        }
+
+        /* ── Hero Visual ── */
+        .hero-visual {
+            position: relative;
+            animation: fadeSlideUp 1s ease-out 0.5s both;
+        }
+        .hero-screenshot {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid rgba(30,80,180,0.1);
+            box-shadow: 0 24px 64px rgba(30,80,180,0.15), 0 0 0 1px rgba(255,255,255,0.8) inset;
+            transition: transform 0.5s ease;
+        }
+        .hero-screenshot:hover {
+            transform: scale(1.02);
+        }
+        .hero-float-card {
+            position: absolute;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(30,80,180,0.1);
+            border-radius: 12px;
+            padding: 1rem 1.3rem;
+            font-size: 0.78rem;
+            box-shadow: var(--pw-shadow);
+        }
+        .hero-float-card.card-1 {
+            bottom: 15%;
+            left: -8%;
+            animation: floatCard 6s ease-in-out infinite;
+        }
+        .hero-float-card.card-2 {
+            top: 10%;
+            right: -5%;
+            animation: floatCard 7s ease-in-out infinite 1s;
+        }
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ── Section Common ── */
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--pw-blue1);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+            color: var(--pw-text);
+        }
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--pw-muted);
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        /* ── Concept Section ── */
+        .concept-section {
+            padding: 7rem 0;
+            position: relative;
+            background: var(--pw-bg);
+        }
+        .concept-card {
+            background: var(--pw-surface);
+            border: 1px solid var(--pw-border);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+            box-shadow: var(--pw-shadow);
+        }
+        .concept-card:hover {
+            border-color: rgba(26,109,255,0.2);
+            transform: translateY(-4px);
+            box-shadow: var(--pw-shadow-lg);
+        }
+        .concept-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--grad-blue);
+            opacity: 0;
+            transition: opacity 0.4s;
+            border-radius: 20px 20px 0 0;
+        }
+        .concept-card:hover::before { opacity: 1; }
+        .concept-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .concept-icon.green { background: rgba(26,109,255,0.08); }
+        .concept-icon.blue { background: rgba(0,153,255,0.08); }
+        .concept-icon.purple { background: rgba(79,70,229,0.08); }
+        .concept-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--pw-text);
+        }
+        .concept-card p {
+            color: var(--pw-muted);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        /* ── Features Section ── */
+        .features-section {
+            padding: 7rem 0;
+            background: linear-gradient(180deg, #f0f5ff 0%, #e8f0fe 50%, #f0f5ff 100%);
+            position: relative;
+        }
+        .feature-grid-item {
+            background: var(--pw-surface);
+            border: 1px solid var(--pw-border);
+            border-radius: 16px;
+            padding: 2.2rem;
+            transition: all 0.35s;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(30,80,180,0.04);
+        }
+        .feature-grid-item:hover {
+            border-color: rgba(26,109,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--pw-shadow-lg);
+        }
+        .feature-grid-item .feature-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--pw-blue2);
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+        .feature-grid-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: var(--pw-text);
+        }
+        .feature-grid-item p {
+            color: var(--pw-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .feature-highlight {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            background: rgba(26,109,255,0.07);
+            color: var(--pw-blue1);
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            margin-top: 0.8rem;
+        }
+
+        /* ── Screenshots Section ── */
+        .screenshots-section {
+            padding: 7rem 0;
+            position: relative;
+            background: var(--pw-bg);
+        }
+        .screenshot-card {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--pw-border);
+            transition: all 0.4s;
+            position: relative;
+            box-shadow: var(--pw-shadow);
+        }
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--pw-shadow-lg);
+            border-color: rgba(26,109,255,0.2);
+        }
+        .screenshot-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .screenshot-card:hover img {
+            transform: scale(1.03);
+        }
+        .screenshot-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.5rem 1.2rem;
+            background: linear-gradient(transparent, rgba(15,23,42,0.85));
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        /* ── Getting Started Section ── */
+        .getstarted-section {
+            padding: 7rem 0;
+            background: linear-gradient(180deg, #f0f5ff 0%, #e8f0fe 50%, #f0f5ff 100%);
+        }
+        .code-block {
+            background: #1e293b;
+            border: none;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--pw-shadow-lg);
+        }
+        .code-block-header {
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .code-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .code-dot.red { background: #ff5f57; }
+        .code-dot.yellow { background: #febc2e; }
+        .code-dot.green { background: #28c840; }
+        .code-block-body {
+            padding: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            overflow-x: auto;
+            color: #e2e8f0;
+        }
+        .code-comment { color: #64748b; }
+        .code-cmd { color: #38bdf8; }
+        .code-arg { color: #67e8f9; }
+        .code-url { color: #fb923c; }
+
+        .step-card {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            margin-bottom: 2.2rem;
+        }
+        .step-num {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: rgba(26,109,255,0.08);
+            border: 1px solid rgba(26,109,255,0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--pw-blue1);
+        }
+        .step-content h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--pw-text);
+        }
+        .step-content p {
+            color: var(--pw-muted);
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        /* ── Publications Section ── */
+        .publications-section {
+            padding: 7rem 0;
+            background: var(--pw-bg);
+        }
+        .pub-card {
+            background: var(--pw-surface);
+            border: 1px solid var(--pw-border);
+            border-radius: 14px;
+            padding: 1.8rem;
+            transition: all 0.35s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 12px rgba(30,80,180,0.04);
+        }
+        .pub-card:hover {
+            border-color: rgba(26,109,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--pw-shadow-lg);
+        }
+        .pub-type {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--pw-warm);
+            margin-bottom: 0.8rem;
+        }
+        .pub-card h5 {
+            font-size: 0.98rem;
+            font-weight: 600;
+            line-height: 1.45;
+            margin-bottom: auto;
+            color: var(--pw-text);
+        }
+        .pub-link {
+            color: var(--pw-blue1);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.3s;
+        }
+        .pub-link:hover { gap: 0.7rem; color: var(--pw-blue2); }
+
+        /* ── Videos Section ── */
+        .videos-section {
+            padding: 7rem 0;
+            background: linear-gradient(180deg, #f0f5ff 0%, #e8f0fe 50%, #f0f5ff 100%);
+        }
+        .video-card {
+            background: var(--pw-surface);
+            border: 1px solid var(--pw-border);
+            border-radius: 14px;
+            padding: 1.8rem;
+            transition: all 0.35s;
+            height: 100%;
+            box-shadow: 0 2px 12px rgba(30,80,180,0.04);
+        }
+        .video-card:hover {
+            border-color: rgba(26,109,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--pw-shadow-lg);
+        }
+        .video-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(249,115,22,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+        .video-card h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--pw-text);
+        }
+        .video-card p {
+            color: var(--pw-muted);
+            font-size: 0.82rem;
+        }
+        .video-card a {
+            color: var(--pw-blue1);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-top: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.3s;
+        }
+        .video-card a:hover { gap: 0.7rem; color: var(--pw-blue2); }
+
+        /* ── Reviews / Steam ── */
+        .steam-section {
+            padding: 7rem 0;
+            background: var(--pw-bg);
+        }
+        .steam-review-box {
+            background: linear-gradient(135deg, #eef4ff, #dbeafe, #eff6ff);
+            border: 1px solid rgba(26,109,255,0.12);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--pw-shadow);
+        }
+        .steam-rating {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--grad-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        .steam-stars {
+            color: #f59e0b;
+            font-size: 1.5rem;
+            margin: 0.8rem 0;
+            letter-spacing: 0.2em;
+        }
+        .steam-verdict {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--pw-blue1);
+        }
+
+        /* ── CTA Section ── */
+        .cta-section {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1a6dff 40%, #0099ff 70%, #38bdf8 100%);
+            color: white;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-section .section-label { color: rgba(255,255,255,0.7); }
+        .cta-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        .cta-desc {
+            color: rgba(255,255,255,0.75);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+        .cta-section .btn-primary-pwct {
+            background: white;
+            color: var(--pw-blue1);
+        }
+        .cta-section .btn-primary-pwct:hover {
+            box-shadow: 0 8px 32px rgba(255,255,255,0.25);
+            color: var(--pw-blue1);
+        }
+        .cta-section .btn-secondary-pwct {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-color: rgba(255,255,255,0.25);
+        }
+        .cta-section .btn-secondary-pwct:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        /* ── System Requirements Section ── */
+        .sysreq-section {
+            border-top: 1px solid var(--pw-border);
+            background: var(--pw-bg-alt);
+        }
+        .sysreq-section .sysreq-box {
+            background: white;
+            border: 1px solid var(--pw-border);
+            border-radius: 14px;
+            padding: 2rem;
+            box-shadow: 0 2px 12px rgba(30,80,180,0.04);
+        }
+
+        /* ── Footer ── */
+        .footer-pwct {
+            border-top: 1px solid var(--pw-border);
+            padding: 3.5rem 0 2.5rem;
+            background: #1e293b;
+            color: #94a3b8;
+        }
+        .footer-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        .footer-logo span {
+            background: var(--grad-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .footer-desc {
+            color: #64748b;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            max-width: 280px;
+        }
+        .footer-heading {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: white;
+            margin-bottom: 1.2rem;
+        }
+        .footer-link {
+            display: block;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
+        }
+        .footer-link:hover { color: #38bdf8; }
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-copy {
+            color: #64748b;
+            font-size: 0.78rem;
+        }
+        .footer-mit {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56,189,248,0.1);
+            border: 1px solid rgba(56,189,248,0.2);
+            border-radius: 100px;
+            padding: 0.3rem 0.9rem;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #38bdf8;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ── Capabilities Grid ── */
+        .cap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--pw-border);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--pw-border);
+            box-shadow: var(--pw-shadow);
+        }
+        .cap-item {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .cap-item:hover { background: #f8faff; }
+        .cap-item .cap-emoji { font-size: 1.8rem; margin-bottom: 0.7rem; }
+        .cap-item h6 { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--pw-text); }
+        .cap-item p { color: var(--pw-muted); font-size: 0.76rem; line-height: 1.5; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero-section { padding: 7rem 0 4rem; }
+            .hero-float-card { display: none; }
+            .cap-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .cap-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Scroll Animations ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<nav class="navbar navbar-expand-lg navbar-pwct fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand navbar-brand-pwct" href="#">PWCT<span>2</span></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link nav-link-pwct" href="#concept">Concept</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-pwct" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-pwct" href="#screenshots">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-pwct" href="#getstarted">Get Started</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-pwct" href="#publications">Research</a></li>
+            </ul>
+            <a href="https://github.com/PWCT/PWCT2" target="_blank" class="nav-link nav-btn-github">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="margin-right:4px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero-section">
+    <div class="hero-bg">
+        <div class="hero-grid"></div>
+    </div>
+    <div class="container position-relative" style="z-index:2">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Free &amp; Open Source · MIT License
+                </div>
+                <h1 class="hero-title">
+                    Program <span class="accent-word">Visually.</span><br>
+                    Think <span class="serif-word">Creatively.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    PWCT2 is a self-hosting visual programming language that lets you build applications and 2D games through interactive visualization — powered by the Ring programming language.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://github.com/PWCT/PWCT2/releases" target="_blank" class="btn btn-primary-pwct">
+                        Download for Windows
+                    </a>
+                    <a href="https://doublesvsoop.sourceforge.net/pwct2" target="_blank" class="btn btn-secondary-pwct">
+                        📄 Documentation
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-visual">
+                    <img src="images/demo1.png" alt="PWCT2 Game Development" class="hero-screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ═══════════ CONCEPT ═══════════ -->
+<section class="concept-section" id="concept">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <div class="section-label">The Vision</div>
+            <h2 class="section-title">General-Purpose Visual<br>Programming Language</h2>
+            <p class="section-desc mx-auto">PWCT has been introducing innovative concepts over two decades that redefine how developers interact with code — replacing traditional approaches with more intuitive visual methods.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 reveal">
+                <div class="concept-card h-100">
+                    <div class="concept-icon green">🔄</div>
+                    <h3>Graphical Code<br>Replacement</h3>
+                    <p>GCR replaces traditional drag-and-drop with automatic Steps Tree generation. The system blends diagrammatic and form-based programming through seamless automatic visual representation.</p>
+                </div>
+            </div>
+            <div class="col-md-4 reveal">
+                <div class="concept-card h-100">
+                    <div class="concept-icon blue">⏱️</div>
+                    <h3>Time Dimension<br>Integration</h3>
+                    <p>PWCT integrates the time dimension at the program design level. Play your programs as movies to visualize step-by-step implementation and travel back through your design history.</p>
+                </div>
+            </div>
+            <div class="col-md-4 reveal">
+                <div class="concept-card h-100">
+                    <div class="concept-icon purple">🏗️</div>
+                    <h3>Self-Hosting<br>Architecture</h3>
+                    <p>PWCT2 is built with PWCT2. As a self-hosting visual programming language, it validates its own capabilities by being its own most demanding application.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ FEATURES ═══════════ -->
+<section class="features-section" id="features">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-5 reveal">
+                <div class="section-label">Capabilities</div>
+                <h2 class="section-title">Everything You Need to Build</h2>
+                <p class="section-desc">Whether you're a beginner learning programming concepts or a professional Ring developer seeking productivity — PWCT2 adapts to your workflow.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-grid-item">
+                    <span class="feature-num">01</span>
+                    <h4>Goal Designer</h4>
+                    <p>Visual programming using the Steps Editor instead of a traditional code editor. Browse components visually and build your logic step by step.</p>
+                    <span class="feature-highlight">Visual Programming</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-grid-item">
+                    <span class="feature-num">02</span>
+                    <h4>Form Designer</h4>
+                    <p>Design your application's user interface with a WYSIWYG form designer. Drag, resize, and customize GUI elements visually.</p>
+                    <span class="feature-highlight">WYSIWYG</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-grid-item">
+                    <span class="feature-num">03</span>
+                    <h4>Time Machine</h4>
+                    <p>Play programs as a movie and run programs in the past. Navigate through your program's design timeline with a slider control.</p>
+                    <span class="feature-highlight">Unique Feature</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-grid-item">
+                    <span class="feature-num">04</span>
+                    <h4>Interactive Visualization</h4>
+                    <p>Import textual source code and instantly see the interactive visual representation. Understand any Ring program through its visual structure.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-grid-item">
+                    <span class="feature-num">05</span>
+                    <h4>Rich Comments</h4>
+                    <p>Add images, tables, and rich media to your application design. Make your programs self-documenting and visually informative.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="feature-grid-item">
+                    <span class="feature-num">06</span>
+                    <h4>Themes &amp; Customization</h4>
+                    <p>Choose from different styles and themes. Customize colors and environment options to match your preferences.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capabilities Grid -->
+        <div class="mt-5 pt-3 reveal">
+            <div class="cap-grid">
+                <div class="cap-item">
+                    <div class="cap-emoji">🖥️</div>
+                    <h6>Desktop Apps</h6>
+                    <p>Windows, Linux, macOS</p>
+                </div>
+                <div class="cap-item">
+                    <div class="cap-emoji">🎮</div>
+                    <h6>2D Games</h6>
+                    <p>Game dev with RayLib</p>
+                </div>
+                <div class="cap-item">
+                    <div class="cap-emoji">🌐</div>
+                    <h6>Web Apps</h6>
+                    <p>Full web development</p>
+                </div>
+                <div class="cap-item">
+                    <div class="cap-emoji">🗃️</div>
+                    <h6>Databases</h6>
+                    <p>SQLite, MySQL, ODBC</p>
+                </div>
+                <div class="cap-item">
+                    <div class="cap-emoji">🎨</div>
+                    <h6>Drawing &amp; Simulation</h6>
+                    <p>Creative applications</p>
+                </div>
+                <div class="cap-item">
+                    <div class="cap-emoji">📦</div>
+                    <h6>Many Samples</h6>
+                    <p>Ready-to-use examples</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ SCREENSHOTS ═══════════ -->
+<section class="screenshots-section" id="screenshots">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <div class="section-label">Gallery</div>
+            <h2 class="section-title">See It in Action</h2>
+            <p class="section-desc mx-auto">From game programming to GUI development — PWCT2 handles it all through its visual programming interface.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 reveal">
+                <div class="screenshot-card">
+                    <img src="images/demo1.png" alt="Visual Programming in PWCT2">
+                    <div class="screenshot-label">💡 Visual Programming</div>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="screenshot-card">
+                    <img src="images/demo2.png" alt="Rich Comments in PWCT2">
+                    <div class="screenshot-label">📝 Rich Comments</div>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="screenshot-card">
+                    <img src="images/demo3.png" alt="GUI Development in PWCT2">
+                    <div class="screenshot-label">🖥️ GUI Development</div>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="screenshot-card">
+                    <img src="images/demo4.png" alt="2D Game Development in PWCT2">
+                    <div class="screenshot-label">🎮 2D Game Development</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ GETTING STARTED ═══════════ -->
+<section class="getstarted-section" id="getstarted">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0 reveal">
+                <div class="section-label">Quick Start</div>
+                <h2 class="section-title">Up &amp; Running in Minutes</h2>
+                <p class="section-desc mb-4">Run from source code on any platform, download from Steam on Windows, or grab a binary release from GitHub.</p>
+
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h5>Install Ring</h5>
+                        <p>Download the Ring programming language from ring-lang.github.io</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h5>Clone the Repository</h5>
+                        <p>Get the PWCT2 source code from GitHub</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h5>Run PWCT2</h5>
+                        <p>Execute the main Ring source file and start building</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 reveal">
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="font-mono" style="font-size:0.72rem;margin-left:0.8rem;color:#64748b">terminal</span>
+                    </div>
+                    <div class="code-block-body">
+                        <span class="code-comment"># Step 1: Install Ring from</span><br>
+                        <span class="code-comment"># <a href="https://ring-lang.github.io" target="_blank" style="color:var(--pw-warm);text-decoration:none">https://ring-lang.github.io</a></span><br>
+                        <br>
+                        <span class="code-comment"># Step 2: Clone the source code</span><br>
+                        <span class="code-cmd">git</span> <span class="code-arg">clone</span> <span class="code-url">https://github.com/pwct/pwct2</span><br>
+                        <br>
+                        <span class="code-comment"># Step 3: Run PWCT2</span><br>
+                        <span class="code-cmd">cd</span> <span class="code-arg">pwct2</span><br>
+                        <span class="code-cmd">ring</span> <span class="code-arg">pwct.ring</span><br>
+                        <br>
+                        <span class="code-comment"># That's it! Happy visual programming 🎉</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ═══════════ PUBLICATIONS ═══════════ -->
+<section class="publications-section" id="publications">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <div class="section-label">Academic Research</div>
+            <h2 class="section-title">Published &amp; Peer-Reviewed</h2>
+            <p class="section-desc mx-auto">PWCT and Ring are backed by multiple published research papers in respected journals and conferences.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 reveal">
+                <div class="pub-card">
+                    <div class="pub-type">Applied Sciences 2025</div>
+                    <h5>PWCT2: A Self-Hosting Visual Programming Language Based on Ring with Interactive Textual-to-Visual Code Conversion</h5>
+                    <a href="https://www.mdpi.com/2076-3417/15/3/1521" target="_blank" class="pub-link">Read Paper →</a>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="pub-card">
+                    <div class="pub-type">Electronics 2024</div>
+                    <h5>Ring: A Lightweight and Versatile Cross-Platform Dynamic Programming Language Developed Using Visual Programming</h5>
+                    <a href="https://www.mdpi.com/2079-9292/13/23/4627" target="_blank" class="pub-link">Read Paper →</a>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="pub-card">
+                    <div class="pub-type">CCF Transactions 2020</div>
+                    <h5>PWCT: A Novel General-Purpose Visual Programming Language in Support of Pervasive Application Development</h5>
+                    <a href="https://link.springer.com/article/10.1007/s42486-020-00038-y" target="_blank" class="pub-link">Read Paper →</a>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="pub-card">
+                    <div class="pub-type">ACM 2017</div>
+                    <h5>PWCT: Visual Language for IoT and Cloud Computing Applications and Systems</h5>
+                    <a href="https://dl.acm.org/doi/10.1145/3018896.3056782" target="_blank" class="pub-link">Read Paper →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section">
+    <div class="container text-center">
+        <div class="reveal">
+            <div class="section-label">Get Started Today</div>
+            <h2 class="cta-title">Start Building <span class="font-serif" style="font-style:italic">Visually</span></h2>
+            <p class="cta-desc">Free and open source. Available on GitHub for Windows, Linux, and macOS. Join the community of visual programmers.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="https://github.com/PWCT/PWCT2/releases" target="_blank" class="btn btn-primary-pwct">
+                    Download Latest Release
+                </a>
+                <a href="https://doublesvsoop.sourceforge.net/pwct2" target="_blank" class="btn btn-secondary-pwct">
+                    Documentation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer-pwct">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="footer-logo">PWCT<span>2</span></div>
+                <p class="footer-desc">Programming Without Coding Technology — Second Generation. A self-hosting visual programming language written in Ring.</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <div class="footer-heading">Product</div>
+                <a href="https://github.com/PWCT/PWCT2/releases" target="_blank" class="footer-link">Downloads</a>
+                <a href="https://doublesvsoop.sourceforge.net/pwct2" target="_blank" class="footer-link">Documentation</a>
+            </div>
+            <div class="col-6 col-lg-2">
+                <div class="footer-heading">Resources</div>
+                <a href="https://github.com/PWCT/PWCT2" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://ring-lang.github.io" target="_blank" class="footer-link">Ring Language</a>
+            </div>
+            <div class="col-6 col-lg-2">
+                <div class="footer-heading">Research</div>
+                <a href="https://www.mdpi.com/2076-3417/15/3/1521" target="_blank" class="footer-link">PWCT2 Paper</a>
+                <a href="https://www.mdpi.com/2079-9292/13/23/4627" target="_blank" class="footer-link">Ring Paper</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">© 2023-2026, Mahmoud Samir Fayed</span>
+            <span class="footer-mit">🔓 MIT License</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Navbar scroll effect
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, i * 80);
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Close mobile menu
+                const navCollapse = document.querySelector('.navbar-collapse');
+                if (navCollapse.classList.contains('show')) {
+                    new bootstrap.Collapse(navCollapse).hide();
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
