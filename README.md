@@ -3,5 +3,6 @@
 In this folder we have the PWCT2 website files
 
 
-URL: http://pwct.github.io
+
+URL: https://pwct.github.io
 
