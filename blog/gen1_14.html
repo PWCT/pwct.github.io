@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWCT2 Blog - PWCT 2.0 (Steam) Rev. 2025.01.09</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pw-primary: #4a2fbd;
+            --pw-primary-light: #6b4fdb;
+            --pw-primary-dark: #351fa3;
+            --pw-surface: #f8f9fc;
+            --pw-surface-alt: #eef0f6;
+            --pw-border: #e2e5ef;
+            --pw-text: #1e293b;
+            --pw-text-muted: #64748b;
+            --pw-header-height: 64px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--pw-text);
+            background: var(--pw-surface);
+            line-height: 1.7;
+        }
+        .pw-navbar {
+            position: fixed; top: 0; left: 0; right: 0;
+            height: var(--pw-header-height);
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--pw-border);
+            z-index: 1030;
+            display: flex; align-items: center;
+            padding: 0 1.5rem;
+        }
+        .pw-navbar .pw-brand {
+            font-weight: 700; font-size: 1.1rem; color: var(--pw-primary);
+            text-decoration: none; display: flex; align-items: center; gap: .6rem;
+        }
+        .pw-navbar .pw-brand .pw-logo-icon {
+            width: 34px; height: 34px; border-radius: 8px;
+            background: linear-gradient(135deg, var(--pw-primary), var(--pw-primary-light));
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-weight: 800; font-size: .85rem;
+        }
+        .pw-navbar .pw-nav-links { margin-left: auto; display: flex; gap: 1.25rem; align-items: center; }
+        .pw-navbar .pw-nav-links a {
+            color: var(--pw-text-muted); text-decoration: none; font-size: .875rem; font-weight: 500;
+            transition: color .2s;
+        }
+        .pw-navbar .pw-nav-links a:hover { color: var(--pw-primary); }
+        .pw-main {
+            margin-top: var(--pw-header-height);
+            padding: 2.5rem 1.5rem 4rem;
+            max-width: 860px;
+            margin-left: auto; margin-right: auto;
+        }
+        .pw-hero {
+            background: linear-gradient(135deg, var(--pw-primary-dark) 0%, var(--pw-primary-light) 60%, #818cf8 100%);
+            border-radius: 16px; padding: 2.5rem;
+            color: #fff; margin-bottom: 2.5rem;
+            position: relative; overflow: hidden;
+            text-align: center;
+        }
+        .pw-hero::before {
+            content: ""; position: absolute; top: -40%; right: -10%;
+            width: 380px; height: 380px; border-radius: 50%;
+            background: rgba(255,255,255,0.07);
+        }
+        .pw-hero h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: .5rem; position: relative; z-index: 1; }
+        .pw-hero p { font-size: .95rem; color: rgba(255,255,255,0.88) !important; margin: 0; position: relative; z-index: 1; }
+        .pw-hero .pw-badge {
+            display: inline-block; background: rgba(255,255,255,0.15);
+            padding: .25rem .75rem; border-radius: 20px;
+            font-size: .78rem; font-weight: 600; margin-top: .75rem;
+            position: relative; z-index: 1;
+        }
+        .pw-section-heading {
+            font-size: 1.3rem; font-weight: 700; color: var(--pw-text);
+            padding-bottom: .6rem;
+            border-bottom: 2px solid var(--pw-primary);
+            margin-bottom: 1.25rem;
+            display: flex; align-items: center; gap: .5rem;
+        }
+        .pw-section-heading .bi { color: var(--pw-primary); font-size: 1rem; }
+        .pw-post-list { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 2.5rem; }
+        .pw-post-item {
+            display: flex; align-items: center; gap: .75rem;
+            background: #fff; border: 1px solid var(--pw-border);
+            border-radius: 10px; padding: .65rem 1rem;
+            text-decoration: none;
+            transition: all .2s ease;
+        }
+        .pw-post-item:hover {
+            border-color: var(--pw-primary-light);
+            box-shadow: 0 2px 12px rgba(74,47,189,0.08);
+            transform: translateX(3px);
+        }
+        .pw-post-num {
+            flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px;
+            background: var(--pw-surface-alt);
+            display: flex; align-items: center; justify-content: center;
+            font-size: .72rem; font-weight: 700; color: var(--pw-primary);
+        }
+        .pw-post-title {
+            flex: 1; font-size: .88rem; font-weight: 500; color: var(--pw-text);
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .pw-post-item:hover .pw-post-title { color: var(--pw-primary); }
+        .pw-post-arrow { color: var(--pw-border); font-size: .8rem; transition: color .2s; }
+        .pw-post-item:hover .pw-post-arrow { color: var(--pw-primary); }
+        .pw-post-card {
+            background: #fff; border: 1px solid var(--pw-border);
+            border-radius: 14px; padding: 2.5rem;
+            box-shadow: 0 4px 24px rgba(74,47,189,0.06);
+            margin-bottom: 2rem;
+        }
+        .pw-post-card h2 {
+            font-size: 1.5rem; font-weight: 700; color: var(--pw-text);
+            margin-bottom: 1.5rem; padding-bottom: 1rem;
+            border-bottom: 2px solid var(--pw-primary);
+        }
+        .pw-post-card p { color: #334155; margin-bottom: .75rem; }
+        .pw-post-card a { color: var(--pw-primary); font-weight: 500; }
+        .pw-post-card a:hover { color: var(--pw-primary-dark); }
+        .pw-post-card img {
+            max-width: 100%; height: auto;
+            border: 1px solid var(--pw-border);
+            border-radius: 10px; margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .pw-post-nav {
+            display: flex; justify-content: space-between; gap: 1rem;
+            margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .pw-post-nav a {
+            display: inline-flex; align-items: center; gap: .4rem;
+            padding: .5rem 1.2rem; border-radius: 8px;
+            background: #fff; border: 1px solid var(--pw-border);
+            color: var(--pw-text-muted); text-decoration: none;
+            font-size: .85rem; font-weight: 600;
+            transition: all .2s;
+        }
+        .pw-post-nav a:hover {
+            background: var(--pw-primary); color: #fff;
+            border-color: var(--pw-primary);
+        }
+        .pw-footer {
+            text-align: center; padding: 2rem 0;
+            border-top: 1px solid var(--pw-border);
+            color: var(--pw-text-muted); font-size: .85rem;
+        }
+        .pw-footer a { color: var(--pw-primary); text-decoration: none; font-weight: 600; }
+        .pw-footer a:hover { text-decoration: underline; }
+        .pw-back-top {
+            position: fixed; bottom: 1.5rem; right: 1.5rem;
+            width: 42px; height: 42px; border-radius: 50%;
+            background: var(--pw-primary); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; font-size: 1.2rem;
+            box-shadow: 0 4px 14px rgba(74,47,189,0.3);
+            opacity: 0; pointer-events: none;
+            transition: all .3s; z-index: 999;
+        }
+        .pw-back-top.visible { opacity: 1; pointer-events: auto; }
+        .pw-back-top:hover { background: var(--pw-primary-dark); color: #fff; transform: translateY(-2px); }
+        @media (max-width: 576px) {
+            .pw-main { padding: 2rem 1rem 3rem; }
+            .pw-hero { padding: 2rem 1.5rem; }
+            .pw-hero h1 { font-size: 1.4rem; }
+            .pw-post-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="pw-navbar">
+    <a class="pw-brand" href="index.html">
+        <span class="pw-logo-icon">P</span>
+        PWCT2 Blog
+    </a>
+    <div class="pw-nav-links d-none d-md-flex">
+        <a href="index.html"><i class="bi bi-journal-text me-1"></i>All Posts</a>
+        <a href="https://pwct.github.io"><i class="bi bi-house-door me-1"></i>PWCT2 Home</a>
+    </div>
+</nav>
+<main class="pw-main"><div class="pw-post-nav"><a href="index.html"><i class="bi bi-arrow-left"></i> All Posts</a></div><div class="pw-post-card"><h2>PWCT 2.0 (Steam) Rev. 2025.01.09</h2>
+			<p> Hello</p>
+			<p> PWCT 2.0 Rev. 2025.01.09 is released on the <a href="https://store.steampowered.com/app/1953110/Programming_Without_Coding_Technology_20/">Steam platform</a></p>
+			<p> Read about <a href="https://store.steampowered.com/news/app/1953110/view/514072769031307629">this update</a></p>
+			<p> Thanks! <br/>  </p>
+		</div><div class="pw-post-nav"><a href="index.html"><i class="bi bi-arrow-left"></i> All Posts</a></div><footer class="pw-footer"><p><a href="index.html">PWCT2 Blog</a> &middot; <a href="https://pwct.github.io">PWCT2 Home</a></p></footer></main>
+<a class="pw-back-top" href="#" id="backToTop" aria-label="Back to top"><i class="bi bi-chevron-up"></i></a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function() {
+    var btn = document.getElementById("backToTop");
+    window.addEventListener("scroll", function() {
+        btn.classList.toggle("visible", window.scrollY > 400);
+    });
+})();
+</script>
+</body>
+</html>
